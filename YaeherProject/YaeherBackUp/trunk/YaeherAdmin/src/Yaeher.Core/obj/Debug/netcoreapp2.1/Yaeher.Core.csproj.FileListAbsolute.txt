@@ -1,0 +1,10 @@
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\bin\Debug\netcoreapp2.1\Yaeher.Core.deps.json
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\bin\Debug\netcoreapp2.1\Yaeher.Core.dll
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\bin\Debug\netcoreapp2.1\Yaeher.Core.pdb
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.csprojAssemblyReference.cache
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.csproj.CoreCompileInputs.cache
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.AssemblyInfoInputs.cache
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.AssemblyInfo.cs
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.dll
+D:\WorkPlace\Yaeher\trunk\YaeherAdmin\src\Yaeher.Core\obj\Debug\netcoreapp2.1\Yaeher.Core.pdb

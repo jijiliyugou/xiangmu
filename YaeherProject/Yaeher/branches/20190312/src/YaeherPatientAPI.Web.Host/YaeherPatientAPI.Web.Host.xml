@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YaeherPatientAPI.Web.Host</name>
+    </assembly>
+    <members>
+        <member name="T:YaeherPatientAPI.Web.Host.Controllers.ConsultationController">
+            <summary>
+            咨询 以及订单管理
+            </summary>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.#ctor(Yaeher.Consultation.IConsultationEvaluationService,Yaeher.Consultation.IConsultationReplyService,Yaeher.Consultation.IConsultationService,Yaeher.Consultation.IPhoneReplyRecordService,Yaeher.IOrderManageService,Yaeher.IOrderTradeRecordService,Yaeher.IRefundManageService,Yaeher.YaeherDoctors.IIncomeDevideService,Yaeher.ILeaguerInfoService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.SystemManage.ISystemParameterService,Yaeher.IAttachmentServices,Yaeher.IUserManagerService,Yaeher.EventBus.IPublishsService,Yaeher.EventBus.IHangFireJobService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            
+            </summary>
+            <param name="consultationEvaluationService"></param>
+            <param name="consultationReplyService"></param>
+            <param name="consultationService"></param>
+            <param name="phoneReplyRecordService"></param>
+            <param name="orderManageService"></param>
+            <param name="orderTradeRecordService"></param>
+            <param name="refundManageService"></param>
+            <param name="incomeDevideService"></param>
+            <param name="leaguerservice"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="systemParameterService"></param>
+            <param name="attachmentServices"></param>
+            <param name="userManagerService"></param>
+            <param name="publishsService"></param>
+            <param name="hangFireJobService"></param>
+            <param name="session"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationById(Yaeher.YaeherConsultationAdd)">
+            <summary>
+            咨询回答 Byid
+            </summary>
+            <param name="ConsultationAdd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateConsultation(Yaeher.YaeherConsultationAdd)">
+            <summary>
+            咨询管理 新增
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CalculateAgeString(System.DateTime,System.DateTime)">
+            <summary>
+            计算年龄字符串
+            默认返回：xx岁xx月xx天
+            </summary>
+            <param name="p_FirstDateTime">第1个日期参数</param>
+            <param name="p_SecondDateTime">第2个日期参数</param>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateConsultation(Yaeher.YaeherConsultationAdd)">
+            <summary>
+            咨询管理 修改
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.Consultation(Yaeher.YaeherConsultation)">
+            <summary>
+            咨询管理 查询
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateReturnVisit(Yaeher.YaeherConsultationAdd)">
+            <summary>
+            咨询回访
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteConsultation(Yaeher.YaeherConsultation)">
+            <summary>
+            咨询管理 删除
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationPage(Yaeher.ConsultationIn)">
+            <summary>
+            咨询管理 Page
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationList(Yaeher.ConsultationIn)">
+            <summary>
+            咨询管理 List 
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationDetail(Yaeher.ConsultationIn)">
+            <summary>
+            咨询详情
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateConsultationReply(Yaeher.Consultation.Dto.ConsultationReplyAdd)">
+            <summary>
+            咨询回答 新增
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateConsultationReply(Yaeher.ConsultationReply)">
+            <summary>
+            咨询回答 修改
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteConsultationReply(Yaeher.ConsultationReply)">
+            <summary>
+            咨询回答 删除
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationReplyPage(Yaeher.Consultation.Dto.ConsultationReplyIn)">
+            <summary>
+            咨询回答 Page
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationReplyList(Yaeher.Consultation.Dto.ConsultationReplyIn)">
+            <summary>
+            咨询回答 List 
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationReplyById(Yaeher.Consultation.Dto.ConsultationReplyIn)">
+            <summary>
+            咨询回答 Byid
+            </summary>
+            <param name="ConsultationReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateConsultationEvaluation(Yaeher.Consultation.Dto.ConsultationEvaluationAdd)">
+            <summary>
+            咨询评分 新增
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateConsultationEvaluation(Yaeher.ConsultationEvaluation)">
+            <summary>
+            咨询评分 修改
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteConsultationEvaluation(Yaeher.ConsultationEvaluation)">
+            <summary>
+            咨询评分 删除
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationEvaluationPage(Yaeher.Consultation.Dto.ConsultationEvaluationIn)">
+            <summary>
+            咨询评分 Page
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationEvaluationList(Yaeher.Consultation.Dto.ConsultationEvaluationIn)">
+            <summary>
+            咨询评分 List 
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.ConsultationEvaluationById(Yaeher.Consultation.Dto.ConsultationEvaluationIn)">
+            <summary>
+            咨询评分详情
+            </summary>
+            <param name="ConsultationEvaluationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreatePhoneReplyRecord(Yaeher.PhoneReplyRecord)">
+            <summary>
+            电话回复记录 新增
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdatePhoneReplyRecord(Yaeher.PhoneReplyRecord)">
+            <summary>
+            电话回复记录 修改
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeletePhoneReplyRecord(Yaeher.PhoneReplyRecord)">
+            <summary>
+            电话回复记录 删除
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.PhoneReplyRecordPage(Yaeher.PhoneReplyRecordIn)">
+            <summary>
+            电话回复记录 Page
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.PhoneReplyRecordList(Yaeher.PhoneReplyRecordIn)">
+            <summary>
+            电话回复记录 List 
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.PhoneReplyRecordById(Yaeher.PhoneReplyRecordIn)">
+            <summary>
+            电话回复记录 Byid
+            </summary>
+            <param name="PhoneReplyRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateOrderManage(Yaeher.OrderManage)">
+            <summary>
+            订单管理 新增
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateOrderManage(Yaeher.OrderManage)">
+            <summary>
+            订单管理 修改
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteOrderManage(Yaeher.OrderManage)">
+            <summary>
+            订单管理 删除
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderManagePage(Yaeher.OrderManageIn)">
+            <summary>
+            订单管理 Page
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderManageList(Yaeher.OrderManageIn)">
+            <summary>
+            订单管理 List 
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderManageById(Yaeher.OrderManageIn)">
+            <summary>
+            订单管理 Byid
+            </summary>
+            <param name="OrderManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateOrderTradeRecord(Yaeher.OrderTradeRecord)">
+            <summary>
+            订单交易记录 新增
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateOrderTradeRecord(Yaeher.OrderTradeRecord)">
+            <summary>
+            订单交易记录 修改
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteOrderTradeRecord(Yaeher.OrderTradeRecord)">
+            <summary>
+            订单交易记录 删除
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderTradeRecordPage(Yaeher.OrderTradeRecordIn)">
+            <summary>
+            订单交易记录 Page
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderTradeRecordList(Yaeher.OrderTradeRecordIn)">
+            <summary>
+            订单交易记录 List 
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DoctorOrderTradeRecordList(Yaeher.OrderTradeRecordIn)">
+            <summary>
+            订单交易记录 List 
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.OrderTradeRecordById(Yaeher.OrderTradeRecordIn)">
+            <summary>
+            订单交易记录 Byid
+            </summary>
+            <param name="OrderTradeRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateRefundManage(Yaeher.RefundManagePatientInfo)">
+            <summary>
+            订单退单管理 新增
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteRefundManage(Yaeher.RefundManage)">
+            <summary>
+            订单退单管理 删除
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.RefundManagePage(Yaeher.RefundManageIn)">
+            <summary>
+            订单退单管理 Page
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.RefundManageList(Yaeher.RefundManageIn)">
+            <summary>
+            订单退单管理 List 
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.RefundManageById(Yaeher.RefundManageIn)">
+            <summary>
+            订单退单管理 Byid
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.CreateIncomeDevide(Yaeher.IncomeDevide)">
+            <summary>
+            订单分配 新增
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.UpdateIncomeDevide(Yaeher.IncomeDevide)">
+            <summary>
+            订单分配 修改
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.DeleteIncomeDevide(Yaeher.IncomeDevide)">
+            <summary>
+            订单分配 删除
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.IncomeDevidePage(Yaeher.YaeherDoctors.Dto.IncomeDevideIn)">
+            <summary>
+            订单分配 Page
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.IncomeDevideList(Yaeher.YaeherDoctors.Dto.IncomeDevideIn)">
+            <summary>
+            订单分配 List 
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.ConsultationController.IncomeDevideById(Yaeher.YaeherDoctors.Dto.IncomeDevideIn)">
+            <summary>
+            订单分配 Byid
+            </summary>
+            <param name="IncomeDevideInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherPatientAPI.Web.Host.Controllers.EvnetController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.#ctor(Yaeher.EventBus.IPublishsService,Yaeher.EventBus.IReceiveEventService,Yaeher.EventBus.ISubscribeService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.EventBus.ISubscribetionService,Yaeher.Consultation.IConsultationService,Yaeher.IOrderManageService,Yaeher.IOrderTradeRecordService,Yaeher.IRefundManageService,Yaeher.Consultation.IConsultationEvaluationService,Yaeher.Consultation.IConsultationReplyService,Yaeher.Consultation.IPhoneReplyRecordService,Abp.Runtime.Session.IAbpSession)">
+            <summary>
+            
+            </summary>
+            <param name="publishsService"></param>
+            <param name="receiveEventService"></param>
+            <param name="subscribeService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="subscribetionService"></param>
+            <param name="consultationService"></param>
+            <param name="orderManageService"></param>
+            <param name="orderTradeRecordService"></param>
+            <param name="refundManageService"></param>
+            <param name="consultationEvaluationService"></param>
+            <param name="consultationReplyService"></param>
+            <param name="phoneReplyRecordService"></param>
+            <param name="abpSession"></param>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.CreatePublishs(Yaeher.EventEntitys.Publishs)">
+            <summary>
+            发布任务
+            </summary>
+            <param name="PublishsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.CreateSubscribe(Yaeher.EventEntitys.Subscribe)">
+            <summary>
+            注册订阅者
+            </summary>
+            <param name="SubscribeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.DoPublishs">
+            <summary>
+            执行未执行的发布 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.DoSubscribe">
+            <summary>
+            执行未订阅成功的信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.CancelSubscribe(Yaeher.EventEntitys.Subscribe)">
+            <summary>
+            取消订阅
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.ClientSubscribetion(Yaeher.EventEntitys.Subscribetion)">
+            <summary>
+            阅读订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.EvnetController.ConsultationManage(Yaeher.EventEntitys.Publishs)">
+            <summary>
+            咨询管理
+            </summary>
+            <param name="PublishsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.HomeController.TestNotification(System.String)">
+            <summary>
+            This is a demo code to demonstrate sending notification to default tenant admin and host admin uers.
+            Don't use this code in production !!!
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.HomeController.ConsultationPaid(Yaeher.YaeherConsultationAdd)">
+            <summary>
+            支付完成调用接口
+            </summary>
+            <param name="ConsultationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.HomeController.PayNotify">
+            <summary>
+            支付回调接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController">
+            <summary>
+            患者端
+            </summary>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.#ctor(Yaeher.IPatientCollectionService,Yaeher.IPatientDoctorService,Yaeher.IShareDoctorService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="patientCollectionService"></param>
+            <param name="patientDoctorService"></param>
+            <param name="shareDoctorService"></param>
+            <param name="session"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.CreateYaeherPatientCollection(Yaeher.YaeherPatientCollection)">
+            <summary>
+            新增我的收藏
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.YaeherPatientCollectionPage(Yaeher.YaeherPatientCollectionIn)">
+            <summary>
+            获取我的收藏Page
+            </summary>
+            <param name="PagePatientCollection"> PagePatientCollection 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.YaeherPatientCollectionList(Yaeher.YaeherPatientCollectionIn)">
+            <summary>
+            获取我的收藏List 
+            </summary>
+            <param name="PatientCollectionList"> PagePatientCollection 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.UpdateYaeherPatientCollection(Yaeher.YaeherPatientCollection)">
+            <summary>
+            更新我的收藏
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.DeleteYaeherPatientCollection(Yaeher.YaeherPatientCollection)">
+            <summary>
+            删除我的收藏
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.CreateYaeherPatientDoctor(Yaeher.YaeherPatientDoctor)">
+            <summary>
+            新增我的医生
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.YaeherPatientDoctor(Yaeher.YaeherPatientDoctor)">
+            <summary>
+            收藏/取关我的医生
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.YaeherPatientDoctorPage(Yaeher.YaeherDoctors.Dto.YaeherDoctorSearch)">
+            <summary>
+            获取我的医生Page
+            </summary>
+            <param name="PagePatientDoctor"> PagePatientDoctor 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.YaeherPatientDoctorList(Yaeher.YaeherPatientDoctorIn)">
+            <summary>
+            获取我的医生List 
+            </summary>
+            <param name="PatientDoctorList"> PatientDoctorList 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.CreateShareDoctor(Yaeher.ShareDoctor)">
+            <summary>
+            新增我的分享
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.ShareDoctorPage(Yaeher.ShareDoctorIn)">
+            <summary>
+            获取我的分享Page
+            </summary>
+            <param name="PageShareDoctor"> PageShareDoctor 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.ShareDoctorList(Yaeher.ShareDoctorIn)">
+            <summary>
+            获取我的分享List 
+            </summary>
+            <param name="ShareDoctorList"> ShareDoctorList 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.UpdateShareDoctor(Yaeher.ShareDoctor)">
+            <summary>
+            更新我的分享
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientCollectionController.DeleteShareDoctor(Yaeher.ShareDoctor)">
+            <summary>
+            删除我的分享
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController">
+            <summary>
+            患者成员管理API
+            </summary>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.#ctor(Yaeher.ILeaguerInfoService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="leaguerservice"></param>
+            <param name="session"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.CreateLeaguerInfo(Yaeher.YaeherPatientLeaguerInfo)">
+            <summary>
+            新增患者成员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.LeaguerInfoPage(Yaeher.LeaguerInfo)">
+            <summary>
+            获取患者成员列表
+            </summary>
+            <param name="PageLeaguer"> PageLeaguer 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.LeaguerInfoById(Yaeher.LeaguerInfoById)">
+            <summary>
+            患者成员详情
+            </summary>
+            <param name="PageLeaguer"> PageLeaguer 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.LeaguerInfoList(Yaeher.LeaguerInfo)">
+            <summary>
+            获取患者成员List 
+            </summary>
+            <param name="PageLeaguer"> PageLeaguer 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.UpdateLeaguerInfo(Yaeher.YaeherPatientLeaguerInfo)">
+            <summary>
+            更新患者成员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherPatientAPI.Web.Host.Controllers.YaeherPatientLeaguerInfoController.DeleteLeaguerInfo(Yaeher.YaeherPatientLeaguerInfo)">
+            <summary>
+            删除患者成员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

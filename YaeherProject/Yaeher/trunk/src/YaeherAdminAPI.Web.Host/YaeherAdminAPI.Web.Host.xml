@@ -1,0 +1,2403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YaeherAdminAPI.Web.Host</name>
+    </assembly>
+    <members>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.AttachmentController">
+            <summary>
+            附件
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.AttachmentController.#ctor(Yaeher.IAttachmentServices,Yaeher.SystemManage.ISystemParameterService,Abp.Domain.Uow.IUnitOfWorkManager,Abp.Runtime.Session.IAbpSession,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.YaeherDoctors.IDoctorFileApplyService,Yaeher.IUserManagerService,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            科室 科室与标签 科室与医生关系
+            </summary>
+            <param name="attachmentService"></param>
+            <param name="systemParameterService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="session"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="doctorFileApplyService"></param>
+            <param name="userManagerService"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.AttachmentController.CreateAttachment(Yaeher.AttachmentIn)">
+            <summary>
+            创建附件
+            </summary>
+            <param name="AttachmentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.AttachmentController.CreateMobileAttachment(Yaeher.AttachmentIn)">
+            <summary>
+            创建附件
+            </summary>
+            <param name="AttachmentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.AttachmentController.AttachmentList(Yaeher.AttachmentIn)">
+            <summary>
+            获取附件 List 
+            </summary>
+            <param name="AttachmentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.AttachmentController.AttachmentDetailList(Yaeher.AttachmentIn)">
+            <summary>
+            获取附件 List 
+            </summary>
+            <param name="AttachmentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController">
+            <summary>
+            科室 科室与标签 科室与医生关系
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.#ctor(Yaeher.ClinicManage.IClinicInfomationService,Yaeher.ClinicManage.IClinicDoctorReltionService,Yaeher.ClinicManage.IClinicLableReltionService,Yaeher.IUserManagerService,Yaeher.YaeherDoctors.IYaeherDoctorService,Abp.Runtime.Session.IAbpSession,Yaeher.ClinicManage.IClinicManageService,Yaeher.LableManages.ILableManageService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.SystemManage.IRelationLabelListService)">
+            <summary>
+            科室 科室与标签 科室与医生关系
+            </summary>
+            <param name="clinicInfomationService"></param>
+            <param name="clinicDoctorReltionService"></param>
+            <param name="clinicLableReltionService"></param>
+            <param name="userManagerService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="session"></param>
+            <param name="clinicManageService"></param>
+            <param name="lableManageService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="relationLabelListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.CreateClinic(Yaeher.ClinicInfomation)">
+            <summary>
+            科室新增
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.UpdateClinic(Yaeher.ClinicInfomation)">
+            <summary>
+            科室修改
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.DeleteClinic(Yaeher.ClinicInfomation)">
+            <summary>
+            科室删除
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicPage(Yaeher.ClinicManage.Dto.ClinicInfomationIn)">
+            <summary>
+            获取科室 Page
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicList(Yaeher.ClinicManage.Dto.ClinicInfomationIn)">
+            <summary>
+            获取科室 List 
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.DoctorOutClinicList(Yaeher.ClinicManage.Dto.ClinicInfomationIn)">
+            <summary>
+            获取医生不在的科室 List 
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicById(Yaeher.ClinicManage.Dto.ClinicInfomationIn)">
+            <summary>
+            获取科室 Byid
+            </summary>
+            <param name="ClinicInfomationInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.CreateClinicDoctor(Yaeher.ClinicDoctorReltion)">
+            <summary>
+            科室与医生
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.UpdateClinicDoctor(Yaeher.ClinicDoctorReltion)">
+            <summary>
+            科室与医生修改
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.DeleteClinicDoctor(Yaeher.ClinicDoctorReltion)">
+            <summary>
+            科室与医生删除
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicDoctorPage(Yaeher.ClinicManage.Dto.ClinicDoctorReltionIn)">
+            <summary>
+            科室与医生 Page
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicDoctorList(Yaeher.ClinicManage.Dto.ClinicDoctorReltionIn)">
+            <summary>
+            科室与医生 List 
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicDoctorById(Yaeher.ClinicManage.Dto.ClinicDoctorReltionIn)">
+            <summary>
+            科室与医生 Byid
+            </summary>
+            <param name="ClinicDoctorReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.CreateClinicLable(Yaeher.ClinicLableReltion)">
+            <summary>
+            科室与标签注册
+            </summary>
+            <param name="ClinicLableReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.UpdateClinicLable(Yaeher.ClinicLableReltion)">
+            <summary>
+            科室与标签修改
+            </summary>
+            <param name="ClinicLableReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.DeleteClinicLable(Yaeher.ClinicLableReltion)">
+            <summary>
+            科室与标签删除
+            </summary>
+            <param name="ClinicLableReltionInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicLablePage(Yaeher.ClinicManage.Dto.ClinicLableReltionIn)">
+            <summary>
+            科室与标签 Page
+            </summary>
+            <param name="ClinicLableReltionInfo"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicLableList(Yaeher.ClinicManage.Dto.ClinicLableReltionIn)">
+            <summary>
+            科室与标签 List 
+            </summary>
+            <param name="ClinicLableReltionInfo"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicLableById(Yaeher.ClinicManage.Dto.ClinicLableReltionIn)">
+            <summary>
+            科室与标签 Byid
+            </summary>
+            <param name="ClinicLableReltionInfo"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicDetailList(Yaeher.ClinicManage.Dto.ClinicInfomationIn)">
+            <summary>
+            门诊 标签  医生 关系
+            </summary>
+            <param name="ClinicInfomationInfo"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.CreateClinicAndLable(Yaeher.ClinicManage.Dto.ClinicLableIn)">
+            <summary>
+            科室与医生关系新增
+            </summary>
+            <param name="ClinicLableInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicLableByClinicID(Yaeher.ClinicManage.Dto.ClinicLableIn)">
+            <summary>
+            科室与标签关系ByClinicID
+            </summary>
+            <param name="ClinicLableInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.CreateClinicAndDoctor(Yaeher.ClinicManage.Dto.ClinicDoctorIn)">
+            <summary>
+            科室与医生关系新增
+            </summary>
+            <param name="ClinicInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ClinicManageController.ClinicDoctorByClinicID(Yaeher.ClinicManage.Dto.ClinicDoctorIn)">
+            <summary>
+            科室与医生关系ByClinicID
+            </summary>
+            <param name="ClinicInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController">
+            <summary>
+            公司收入
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.#ctor(Yaeher.CompaniesReport.ICorporateIncomeTotalService,Yaeher.CompaniesReport.ICorporateIncomeDetailsService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            
+            </summary>
+            <param name="corporateIncomeTotalService"></param>
+            <param name="corporateIncomeDetailsService"></param>
+            <param name="session"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CreateCorporateIncomeTotal(Yaeher.CorporateIncomeTotal)">
+            <summary>
+            公司收入总计 新增
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.UpdateCorporateIncomeTotal(Yaeher.CorporateIncomeTotal)">
+            <summary>
+            公司收入总计 修改
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.DeleteCorporateIncomeTotal(Yaeher.CorporateIncomeTotal)">
+            <summary>
+            公司收入总计 删除
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeTotalPage(Yaeher.CompaniesReport.Dto.CorporateIncomeTotalIn)">
+            <summary>
+            公司收入总计 Page
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeTotalList(Yaeher.CompaniesReport.Dto.CorporateIncomeTotalIn)">
+            <summary>
+            公司收入总计 List 
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeTotalById(Yaeher.CompaniesReport.Dto.CorporateIncomeTotalIn)">
+            <summary>
+            公司收入总计 Byid
+            </summary>
+            <param name="CorporateIncomeTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CreateCorporateIncomeDetails(Yaeher.CorporateIncomeDetails)">
+            <summary>
+            科室公司收入明细
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.UpdateCorporateIncomeDetails(Yaeher.CorporateIncomeDetails)">
+            <summary>
+            科室公司收入明细
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.DeleteCorporateIncomeDetails(Yaeher.CorporateIncomeDetails)">
+            <summary>
+            公司收入明细删除
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeDetailsPage(Yaeher.CompaniesReport.Dto.CorporateIncomeDetailsIn)">
+            <summary>
+            公司收入明细 Page
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeDetailsList(Yaeher.CompaniesReport.Dto.CorporateIncomeDetailsIn)">
+            <summary>
+            公司收入明细 List 
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.CompaniesReportController.CorporateIncomeDetailsById(Yaeher.CompaniesReport.Dto.CorporateIncomeDetailsIn)">
+            <summary>
+            公司收入明细 Byid
+            </summary>
+            <param name="CorporateIncomeDetailsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController">
+            <summary>
+            医生准则
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.#ctor(Yaeher.DoctorRule.IDoctorRulesService,Abp.Runtime.Session.IAbpSession,Yaeher.ClinicManage.IClinicDoctorReltionService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.IUserManagerService,Yaeher.ClinicManage.IClinicInfomationService,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            
+            </summary>
+            <param name="doctorRulesService"></param>
+            <param name="session"></param>
+            <param name="clinicDoctorReltionService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="userManagerService"></param>
+            <param name="clinicInfomationService"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.CreateDoctorRules(Yaeher.DoctorRules)">
+            <summary>
+            医生准则 新增
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.UpdateDoctorRules(Yaeher.DoctorRules)">
+            <summary>
+            医生准则 修改
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.DeleteDoctorRules(Yaeher.DoctorRules)">
+            <summary>
+            医生准则 删除
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.DoctorRulesPage(Yaeher.DoctorRule.Dto.DoctorRulesIn)">
+            <summary>
+            医生准则 Page
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.DoctorRulesList(Yaeher.DoctorRule.Dto.DoctorRulesIn)">
+            <summary>
+            医生准则 List 
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.DoctorRulesController.DoctorRulesById(Yaeher.DoctorRule.Dto.DoctorRulesIn)">
+            <summary>
+            医生准则 Byid
+            </summary>
+            <param name="DoctorRulesInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.EvnetController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.#ctor(Yaeher.EventBus.IPublishsService,Yaeher.EventBus.IReceiveEventService,Yaeher.EventBus.ISubscribeService,Yaeher.EventBus.ISubscribetionService,Yaeher.EventBus.IHangFireJobService,Yaeher.Consultation.IConsultationService,Yaeher.NumericalStatement.IConsultationOrderTotalService,Yaeher.NumericalStatement.IEvaluationTotalService,Abp.Runtime.Session.IAbpSession,Yaeher.IOrderManageService,Yaeher.IOrderTradeRecordService,Yaeher.IYaeherUserService,Yaeher.YaeherDoctors.IServiceMoneyListService,Yaeher.SystemManage.ISystemParameterService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.IRefundManageService,Yaeher.SystemManage.ISystemConfigsService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.YaeherDoctors.IncomeDevideService,Yaeher.SystemManage.DoctorOnlineRecordService,Yaeher.DoctorReport.IIncomeDetailsService,Yaeher.SystemManage.IWecharSendMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="publishsService"></param>
+            <param name="receiveEventService"></param>
+            <param name="subscribeService"></param>
+            <param name="subscribetionService"></param>
+            <param name="hangFireJobService"></param>
+            <param name="consultationService"></param>
+            <param name="consultationOrderTotalService"></param>
+            <param name="evaluationTotalService"></param>
+            <param name="abpSession"></param>
+            <param name="orderManageService"></param>
+            <param name="orderTradeRecordService"></param>
+            <param name="yaeherUserService"></param>
+            <param name="serviceMoneyListService"></param>
+            <param name="systemParameterService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="refundManageService"></param>
+            <param name="systemConfigsService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="incomeDevideService"></param>
+            <param name="doctorOnlineRecordService"></param>
+            <param name="incomeDetailsService"></param>
+            <param name="wecharSendMessageService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.CreatePublishs(Yaeher.EventEntitys.Publishs)">
+            <summary>
+            发布任务
+            </summary>
+            <param name="PublishsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.CreateSubscribe(Yaeher.EventEntitys.Subscribe)">
+            <summary>
+            注册订阅者
+            </summary>
+            <param name="SubscribeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.CancelSubscribe(Yaeher.EventEntitys.Subscribe)">
+            <summary>
+            取消订阅者
+            </summary>
+            <param name="SubscribeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.DoSubscribeTask">
+            <summary>
+            执行订阅机制  将消息发布到订阅者
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.RelayPublishs(Yaeher.EventEntitys.PendingEvent)">
+            <summary>
+            跟据筛选数据进行发布消息
+            </summary>
+            <param name="PublishsInfo"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.DoHangFire(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            回传执行咨询完成  咨询退单
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.OrderTotalTest(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            订单统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.EvaluationTotalTest(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            订单统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.OrderTotal(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            订单统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.EvaluationTotal(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            评分统计  
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.WarningConsultation(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            预警提醒
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.IncomeTotalTest(Yaeher.EventBus.Dto.HangFireJobIn)">
+            <summary>
+            结算统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.EvnetController.IncomeTotalOld(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            结算统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.HomeController">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.#ctor(Abp.Notifications.INotificationPublisher,Yaeher.SystemManage.ISystemParameterService,Yaeher.SystemManage.IDoctorParaSetService)">
+            <summary>
+            Home 构造函数
+            </summary>
+            <param name="notificationPublisher"></param>
+            <param name="systemParameterService"></param>
+            <param name="doctorParaSetService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.TestNotification(System.String)">
+            <summary>
+            This is a demo code to demonstrate sending notification to default tenant admin and host admin uers.
+            Don't use this code in production !!!
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.ConsultationReplyParameter(Yaeher.Consultation.Dto.ConsultationReplyAdd)">
+            <summary>
+            获取评价理由
+            </summary>
+            <param name="ConsultationReplyParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.RefundManageType(Yaeher.RefundManageType)">
+            <summary>
+            获取退单理由
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.ConsultationEvaluationReson(Yaeher.ConsultationEvaluationReason)">
+            <summary>
+            获取评价理由
+            </summary>
+            <param name="RefundManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.TencentCosAccessTokenType(Yaeher.SecretModel)">
+            <summary>
+            获取附件类型业务类型
+            </summary>
+            <param name="file"> FileAccess 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.HomeController.TencentCosAccessToken(Yaeher.FileAccess)">
+            <summary>
+            获取注册用户信息 List 
+            </summary>
+            <param name="file"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.LableManageController">
+            <summary>
+            标签管理
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.#ctor(Yaeher.LableManages.ILableManageService,Abp.Runtime.Session.IAbpSession,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.YaeherDoctors.IDoctorRelationService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.IUserManagerService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.ClinicManage.IClinicDoctorReltionService,Yaeher.ClinicManage.IClinicLableReltionService,Yaeher.SystemManage.IRelationLabelListService)">
+            <summary>
+            
+            </summary>
+            <param name="lableManageService"></param>
+            <param name="session"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="doctorRelationService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="userManagerService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="clinicDoctorReltionService"></param>
+            <param name="clinicLableReltionService"></param>
+            <param name="relationLabelListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.CreateLable(Yaeher.LableManage)">
+            <summary>
+            创建标签
+            </summary>
+            <param name="LableManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.UpdateLable(Yaeher.LableManage)">
+            <summary>
+            标签修改
+            </summary>
+            <param name="LableManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.DeleteLable(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            标签删除
+            </summary>
+            <param name="LableManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.LablePage(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取科室对应标签 Page
+            </summary>
+            <param name="LableManageInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.LableList(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取科室对应标签 List 
+            </summary>
+            <param name="LableManageInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.LableClinicList(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取科室对应标签 List 
+            </summary>
+            <param name="LableManageInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.LableById(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取标签信息 Byid
+            </summary>
+            <param name="LableManageInfo"> LableManageIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.LableByName(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取标签信息 Byid
+            </summary>
+            <param name="LableManageInfo"> LableManageIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.LableManageController.DoctorLables(Yaeher.LableManages.Dto.LableManageIn)">
+            <summary>
+            获取标签信息 Byid
+            </summary>
+            <param name="LableManageInfo"> LableManageIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController">
+            <summary>
+            统计报表
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.#ctor(Yaeher.NumericalStatement.IConsultationOrderTotalService,Abp.Runtime.Session.IAbpSession,Yaeher.NumericalStatement.IEvaluationTotalService,Yaeher.IUserManagerService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.Consultation.IConsultationEvaluationService,Yaeher.ClinicManage.IClinicInfomationService,Yaeher.ClinicManage.IClinicDoctorReltionService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.YaeherDoctors.IServiceMoneyListService,Yaeher.SystemManage.IRecommendedOrderingService,Yaeher.YaeherDoctors.IDoctorRelationService,Yaeher.Consultation.IConsultationService,Yaeher.SystemManage.IDoctorOnlineRecordService,Yaeher.IYaeherUserService,Yaeher.IOrderTradeRecordService,Yaeher.CompaniesReport.ICorporateIncomeTotalService,Yaeher.DoctorReport.IIncomeDetailsService,Yaeher.SystemManage.IYaeherOperListService,Abp.Runtime.Caching.ICacheManager)">
+            <summary>
+            
+            </summary>
+            <param name="consultationOrderTotalService"></param>
+            <param name="session"></param>
+            <param name="evaluationTotalService"></param>
+            <param name="userManagerService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="consultationEvaluationService"></param>
+            <param name="clinicInfomationService"></param>
+            <param name="clinicDoctorReltionService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="serviceMoneyListService"></param>
+            <param name="recommendedOrderingService"></param>
+            <param name="doctorRelationService"></param>
+            <param name="consultationService"></param>
+            <param name="doctorOnlineRecordService"></param>
+            <param name="yaeherUserService"></param>
+            <param name="orderTradeRecordService"></param>
+            <param name="corporateIncomeTotalService"></param>
+            <param name="incomeDetailsService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="cacheManager"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.CreateConsultationOrderTotal(Yaeher.NumericalStatement.ConsultationOrderTotal)">
+            <summary>
+            创建 订单汇总表
+            </summary>
+            <param name="ConsultationOrderTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.ConsultationOrderTotalInPage(Yaeher.NumericalStatement.Dto.ConsultationOrderTotalIn)">
+            <summary>
+            订单统计报表 Page
+            </summary>
+            <param name="ConsultationOrderTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.ConsultationOrderTotalList(Yaeher.NumericalStatement.Dto.ConsultationOrderTotalIn)">
+            <summary>
+            订单统计报表 List 
+            </summary>
+            <param name="ConsultationOrderTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.CreateEvaluationTotal(Yaeher.NumericalStatement.EvaluationTotal)">
+            <summary>
+            创建 评分汇总表
+            </summary>
+            <param name="EvaluationTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.EvaluationTotalPage(Yaeher.NumericalStatement.Dto.EvaluationTotalIn)">
+            <summary>
+            评分汇总表 Page
+            </summary>
+            <param name="EvaluationTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.EvaluationTotalList(Yaeher.NumericalStatement.Dto.EvaluationTotalIn)">
+            <summary>
+            评分汇总表 List 
+            </summary>
+            <param name="EvaluationTotalInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.QualityEvaluationTotal(Yaeher.NumericalStatement.Dto.EvaluationTotalIn)">
+             <summary>
+            质控评价统计
+             </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.QualityEvaluationPage(Yaeher.Consultation.Dto.ConsultationEvaluationIn)">
+             <summary>
+            质控评价统计列表
+             </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.ConsultReplyMemory(Yaeher.Consultation.Dto.ConsultationReplyAdd)">
+            <summary>
+            回复内容缓存 新增，修改
+            </summary>
+            <param name="Consultation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.GetReplyMemory(Yaeher.Consultation.Dto.ConsultationReplyAdd)">
+            <summary>
+            回复内容缓存获取
+            </summary>
+            <param name="Consultation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.RemoveConsultReplyMemory(Yaeher.Consultation.Dto.ConsultationReplyAdd)">
+            <summary>
+            回复内容缓存 删除
+            </summary>
+            <param name="Consultation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.DoctorSortList(Yaeher.NumericalStatement.Dto.DockorSortIn)">
+            <summary>
+            评分汇总表 List 
+            </summary>
+            <param name="DockorSortInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.DoctorSortMemoryCache(Yaeher.NumericalStatement.Dto.DockorSortIn)">
+            <summary>
+            DoctorSortMemoryCache
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.AdminConsultationReport(Yaeher.NumericalStatement.Dto.ConsultationOrderTotalIn)">
+             <summary>
+            管理订单统计列表
+             </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.AdminFlowReport(Yaeher.YaeherUserIn)">
+             <summary>
+            管理流量列表
+             </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.AdminIncomeReport(Yaeher.CompaniesReport.Dto.CorporateIncomeTotalIn)">
+             <summary>
+            管理收入列表
+             </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.NumericalStatementController.AdminIncomeDetailReport(Yaeher.CompaniesReport.Dto.CorporateIncomeTotalIn)">
+             <summary>
+            管理收入列表明细
+             </summary>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.QualityController">
+            <summary>
+            质控管理
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.#ctor(Yaeher.Quality.IQualityCommitteeService,Yaeher.Quality.IQualityCommitteeRegisterService,Abp.Runtime.Session.IAbpSession,Yaeher.ClinicManage.IClinicInfomationService,Yaeher.YaeherDoctors.IYaeherDoctorService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.LableManages.ILableManageService,Yaeher.YaeherDoctors.IDoctorRelationService,Yaeher.IUserManagerService,Yaeher.DoctorQuality.IQualityControlManageService,Yaeher.NumericalStatement.IConsultationOrderTotalService,Yaeher.Consultation.IConsultationService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.NumericalStatement.IEvaluationTotalService)">
+            <summary>
+            
+            </summary>
+            <param name="qualityCommitteeService"></param>
+            <param name="qualityCommitteeRegisterService"></param>
+            <param name="session"></param>
+            <param name="clinicInfomationService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="lableManageService"></param>
+            <param name="doctorRelationService"></param>
+            <param name="userManagerService"></param>
+            <param name="qualityControlManageService"></param>
+            <param name="consultationOrderTotalService"></param>
+            <param name="consultationService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="evaluationTotalService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommittee(Yaeher.Quality.Dto.QualityCommitteeAdd)">
+            <summary>
+            成为质控委员审核
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.CreateQualityCommittee(Yaeher.Quality.Dto.QualityCommitteeAdd)">
+            <summary>
+            质控手动新增质控委员审核
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.UpdateQualityCommittee(Yaeher.QualityCommittee)">
+            <summary>
+            质控委员 修改
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.DeleteQualityCommittee(Yaeher.Quality.Dto.QualityCommitteeIn)">
+            <summary>
+            质控委员 删除
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteePage(Yaeher.Quality.Dto.QualityCommitteeIn)">
+            <summary>
+            质控委员 Page
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeList(Yaeher.Quality.Dto.QualityCommitteeIn)">
+            <summary>
+            质控委员 List 
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeById(Yaeher.Quality.Dto.QualityCommitteeIn)">
+            <summary>
+            质控委员 Byid
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.CreateQualityCommitteeRegister(Yaeher.QualityCommitteeRegister)">
+            <summary>
+            申请质控委员 新增
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeByUser(Yaeher.SecretModel)">
+            <summary>
+            质控委员信息
+            </summary>
+            <param name="secret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.UpdateQualityCommitteeRegister(Yaeher.QualityCommitteeRegister)">
+            <summary>
+            申请质控委员 修改
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.DeleteQualityCommitteeRegister(Yaeher.QualityCommitteeRegister)">
+            <summary>
+            申请质控委员 删除
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeRegisterPage(Yaeher.Quality.Dto.QualityCommitteeRegisterIn)">
+            <summary>
+            申请质控委员 Page
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeRegisterList(Yaeher.Quality.Dto.QualityCommitteeRegisterIn)">
+            <summary>
+            申请质控委员 List 
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityCommitteeRegisterById(Yaeher.Quality.Dto.QualityCommitteeRegisterIn)">
+            <summary>
+            申请质控委员 Byid
+            </summary>
+            <param name="QualityCommitteeRegisterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityDoctorRanking(Yaeher.NumericalStatement.Dto.ConsultationOrderTotalIn)">
+            <summary>
+            质控查看医生排行
+            </summary>
+            <param name="QualityCommitteeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.QualityController.QualityReturnReport(Yaeher.ConsultationIn)">
+            <summary>
+            质控查看退单统计
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.ReleaseController">
+            <summary>
+             文章 问答 发布管理
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.#ctor(Yaeher.Release.IArticleOperListService,Yaeher.Release.IQuestionReleaseService,Yaeher.Release.IReleaseManageService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.ISystemParameterService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.IUserManagerService,Yaeher.IYaeherUserService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.YaeherDoctors.IDoctorPaperService)">
+            <summary>
+            
+            </summary>
+            <param name="articleOperListService"></param>
+            <param name="questionReleaseService"></param>
+            <param name="releaseManageService"></param>
+            <param name="session"></param>
+            <param name="systemParameterService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="userManagerService"></param>
+            <param name="yaeherUserService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="doctorPaperService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.CreateReleaseManage(Yaeher.ReleaseManage)">
+            <summary>
+            文章发布 新增
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.UpdateReleaseManage(Yaeher.ReleaseManage)">
+            <summary>
+            文章发布 修改
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.DeleteReleaseManage(Yaeher.ReleaseManage)">
+            <summary>
+            文章发布 删除
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ReleaseManagePage(Yaeher.Release.ReleaseManageIn)">
+            <summary>
+            文章发布 Page
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ReleaseManageList(Yaeher.Release.ReleaseManageIn)">
+            <summary>
+            文章发布 List 
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ReleaseManageById(Yaeher.Release.ReleaseManageIn)">
+            <summary>
+            文章发布 Byid
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ReleaseArticle(Yaeher.ReleaseManage)">
+            <summary>
+            发布文章  展示到咨询菜单中的文章  以及医生主页上显示的文章
+            </summary>
+            <param name="ReleaseManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.CreateQuestionRelease(Yaeher.QuestionRelease)">
+            <summary>
+            问答发布 新增
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.UpdateQuestionRelease(Yaeher.QuestionRelease)">
+            <summary>
+            问答发布修改
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.DeleteQuestionRelease(Yaeher.QuestionRelease)">
+            <summary>
+            问答发布删除
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.QuestionReleasePage(Yaeher.Release.QuestionReleaseIn)">
+            <summary>
+            问答发布 Page
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.QuestionReleaseList(Yaeher.Release.QuestionReleaseIn)">
+            <summary>
+            问答发布 List 
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.QuestionReleaseById(Yaeher.Release.QuestionReleaseIn)">
+            <summary>
+            问答详情
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.QuestionReleasepraise(Yaeher.Release.QuestionReleaseIn)">
+            <summary>
+            问答详情点赞
+            </summary>
+            <param name="QuestionReleaseInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ArticleOperParameter(Yaeher.ArticleOperList)">
+             <summary>
+            文章 问答操作类型
+             </summary>
+             <param name="ConsultationReplyParameter"></param>
+             <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.UpdateArticleOper(Yaeher.ArticleOperList)">
+            <summary>
+            文章 问答操作日志 修改
+            </summary>
+            <param name="ArticleOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.DeleteArticleOper(Yaeher.ArticleOperList)">
+            <summary>
+            文章 问答操作日志 删除
+            </summary>
+            <param name="ArticleOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ArticleOperPage(Yaeher.Release.ArticleOperListIn)">
+            <summary>
+            文章 问答操作日志 Page
+            </summary>
+            <param name="ArticleOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ArticleOperList(Yaeher.Release.ArticleOperListIn)">
+            <summary>
+            文章 问答操作日志 List 
+            </summary>
+            <param name="ArticleOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.ReleaseController.ArticleOperById(Yaeher.Release.ArticleOperListIn)">
+            <summary>
+            文章 问答操作日志 Byid
+            </summary>
+            <param name="ArticleOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.SystemManageController">
+            <summary>
+            系统设置
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.#ctor(Yaeher.SystemManage.IAreaManageService,Yaeher.SystemManage.IDoctorCheckService,Yaeher.SystemManage.IDoctorOnlineRecordService,Yaeher.SystemManage.IDoctorOnlineSetLogService,Yaeher.SystemManage.IDoctorWithdrawRecordService,Yaeher.SystemManage.IInterfaceSetService,Yaeher.SystemManage.ISystemParameterService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.SystemManage.IDoctorParaSetService,Yaeher.MessageRemind.IYaeherMessageRemindService,Yaeher.YaeherDoctors.IYaeherDoctorService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.IUserManagerService,Yaeher.SystemManage.ISystemConfigsService,Yaeher.MessageRemind.IYaeherPhoneService,Yaeher.SystemManage.IYaeherBannerService,Yaeher.SystemManage.IYaeherLabelConfigService,Yaeher.IYaeherConditionalMenuService,Yaeher.SystemManage.IYaeherMessageTemplateService,Yaeher.SystemManage.IWecharSendMessageService,Yaeher.SystemManage.ISendMessageService,Yaeher.IYaeherUserService,Yaeher.SystemManage.IAcceptTencentWecharService,Yaeher.SystemManage.IAcceptWecharStateService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IRelationLabelGroupService,Yaeher.SystemManage.ISystemTokenService,Yaeher.SystemManage.IQuickReplyService)">
+            <summary>
+            
+            </summary>
+            <param name="areaManageService"></param>
+            <param name="doctorCheckService"></param>
+            <param name="doctorOnlineRecordService"></param>
+            <param name="doctorOnlineSetLogService"></param>
+            <param name="doctorWithdrawRecordService"></param>
+            <param name="interfaceSetService"></param>
+            <param name="systemParameterService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="doctorParaSetService"></param>
+            <param name="yaeherMessageRemindService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="userManagerService"></param>
+            <param name="systemConfigsService"></param>
+            <param name="yaeherPhoneService"></param>
+            <param name="yaeherBannerService"></param>
+            <param name="yaeherLabelConfigService"></param>
+            <param name="yaeherConditionalMenuService"></param>
+            <param name="yaeherMessageTemplateService"></param>
+            <param name="wecharSendMessageService"></param>
+            <param name="sendMessageService"></param>
+            <param name="yaeherUserService"></param>
+            <param name="acceptTencentWecharService"></param>
+            <param name="acceptWecharStateService"></param>
+            <param name="session"></param>
+            <param name="relationLabelGroupService"></param>
+            <param name="systemTokenService"></param>
+            <param name="quickReplyService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateDoctorOnlineRecord(Yaeher.DoctorOnlineRecord)">
+            <summary>
+            医生上下线设置记录 新增
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateDoctorOnlineRecord(Yaeher.DoctorOnlineRecord)">
+            <summary>
+            医生上下线设置记录 修改
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteDoctorOnlineRecord(Yaeher.DoctorOnlineRecord)">
+            <summary>
+            医生上下线设置记录 删除
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineRecordPage(Yaeher.SystemManage.Dto.DoctorOnlineRecordIn)">
+            <summary>
+            医生上下线设置记录 Page
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineRecordList(Yaeher.SystemManage.Dto.DoctorOnlineRecordIn)">
+            <summary>
+            医生上下线设置记录 List 
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineRecordById(Yaeher.SystemManage.Dto.DoctorOnlineRecordIn)">
+            <summary>
+            医生上下线设置记录 Byid
+            </summary>
+            <param name="DoctorOnlineRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineSetLogPage(Yaeher.SystemManage.Dto.DoctorOnlineSetLogIn)">
+            <summary>
+            医生上下线设置记录log Page
+            </summary>
+            <param name="DoctorOnlineSetLogInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineSetLogList(Yaeher.SystemManage.Dto.DoctorOnlineSetLogIn)">
+            <summary>
+            医生上下线设置记录log List 
+            </summary>
+            <param name="DoctorOnlineSetLogInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorOnlineSetLogById(Yaeher.SystemManage.Dto.DoctorOnlineSetLogIn)">
+            <summary>
+            医生上下线设置记录log Byid
+            </summary>
+            <param name="DoctorOnlineSetLogInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateDoctorCheck(Yaeher.DoctorCheck)">
+            <summary>
+            医生审核 新增
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateDoctorCheck(Yaeher.DoctorCheck)">
+            <summary>
+            医生审核 修改
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteDoctorCheck(Yaeher.DoctorCheck)">
+            <summary>
+            医生审核 删除
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorCheckPage(Yaeher.SystemManage.Dto.DoctorCheckIn)">
+            <summary>
+            医生审核 Page
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorCheckList(Yaeher.SystemManage.Dto.DoctorCheckIn)">
+            <summary>
+            医生审核 List 
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorCheckById(Yaeher.SystemManage.Dto.DoctorCheckIn)">
+            <summary>
+            医生审核 Byid
+            </summary>
+            <param name="DoctorCheckInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateAreaManage(Yaeher.AreaManage)">
+            <summary>
+            地区管理 新增
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateAreaManage(Yaeher.AreaManage)">
+            <summary>
+            地区管理 修改
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteAreaManage(Yaeher.AreaManage)">
+            <summary>
+            地区管理 删除
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AreaManagePage(Yaeher.SystemManage.Dto.AreaManageIn)">
+            <summary>
+            地区管理 Page
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AreaManageList(Yaeher.SystemManage.Dto.AreaManageIn)">
+            <summary>
+            地区管理 List 
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AreaManageById(Yaeher.SystemManage.Dto.AreaManageIn)">
+            <summary>
+            地区管理 Byid
+            </summary>
+            <param name="AreaManageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateDoctorWithdrawRecord(Yaeher.DoctorWithdrawRecord)">
+            <summary>
+            医生提现记录表 新增
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateDoctorWithdrawRecord(Yaeher.DoctorWithdrawRecord)">
+            <summary>
+            医生提现记录表 修改
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteDoctorWithdrawRecord(Yaeher.DoctorWithdrawRecord)">
+            <summary>
+            医生提现记录表 删除
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorWithdrawRecordPage(Yaeher.SystemManage.Dto.DoctorWithdrawRecordIn)">
+            <summary>
+            医生提现记录表 Page
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorWithdrawRecordList(Yaeher.SystemManage.Dto.DoctorWithdrawRecordIn)">
+            <summary>
+            医生提现记录表 List 
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorWithdrawRecordById(Yaeher.SystemManage.Dto.DoctorWithdrawRecordIn)">
+            <summary>
+            医生提现记录表 Byid
+            </summary>
+            <param name="DoctorWithdrawRecordInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateSystemParameter(Yaeher.SystemParameter)">
+            <summary>
+            系统参数设置 新增
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateSystemParameter(Yaeher.SystemParameter)">
+            <summary>
+            系统参数设置 修改
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteSystemParameter(Yaeher.SystemParameter)">
+            <summary>
+            系统参数设置 删除
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemParameterPage(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            系统参数设置 Page
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemParameterList(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            系统参数设置 List 
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemParameterById(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            系统参数设置 Byid
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateDoctorParaSet(Yaeher.DoctorParaSet)">
+            <summary>
+            医生参数设置 新增
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateDoctorParaSet(Yaeher.DoctorParaSet)">
+            <summary>
+            医生参数设置 修改
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteDoctorParaSet(Yaeher.DoctorParaSet)">
+            <summary>
+            医生参数设置 删除
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorParaSetPage(Yaeher.SystemManage.Dto.DoctorParaSetIn)">
+            <summary>
+            医生参数设置 Page
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorParaSetList(Yaeher.SystemManage.Dto.DoctorParaSetIn)">
+            <summary>
+            医生参数设置 List 
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorParaSetById(Yaeher.SystemManage.Dto.DoctorParaSetIn)">
+            <summary>
+            医生参数设置 Byid
+            </summary>
+            <param name="DoctorParaSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateInterfaceSet(Yaeher.InterfaceSet)">
+            <summary>
+            对接接口设置 新增
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateInterfaceSet(Yaeher.InterfaceSet)">
+            <summary>
+            对接接口设置 修改
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteInterfaceSet(Yaeher.InterfaceSet)">
+            <summary>
+            对接接口设置 删除
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.InterfaceSetPage(Yaeher.SystemManage.Dto.InterfaceSetIn)">
+            <summary>
+            对接接口设置 Page
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.InterfaceSetList(Yaeher.SystemManage.Dto.InterfaceSetIn)">
+            <summary>
+            对接接口设置 List 
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.InterfaceSetById(Yaeher.SystemManage.Dto.InterfaceSetIn)">
+            <summary>
+            对接接口设置 Byid
+            </summary>
+            <param name="InterfaceSetInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateYaeherOperList(Yaeher.YaeherOperList)">
+            <summary>
+            操作日志表 新增
+            </summary>
+            <param name="YaeherOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherOperListPage(Yaeher.SystemManage.Dto.YaeherOperListIn)">
+            <summary>
+            操作日志表 Page
+            </summary>
+            <param name="YaeherOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherOperLists(Yaeher.SystemManage.Dto.YaeherOperListIn)">
+            <summary>
+            操作日志表 List 
+            </summary>
+            <param name="YaeherOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherOperListById(Yaeher.SystemManage.Dto.YaeherOperListIn)">
+            <summary>
+            操作日志表 Byid
+            </summary>
+            <param name="YaeherOperListInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherMessage(Yaeher.YaeherMessageRemind)">
+            <summary>
+            短信记录表 新增
+            </summary>
+            <param name="YaeherMessageRemindInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherMessageRemindPage(Yaeher.MessageRemind.Dto.YaeherMessageRemindIn)">
+            <summary>
+            短信记录表 Page
+            </summary>
+            <param name="YaeherMessageRemindInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherMessageRemindLists(Yaeher.MessageRemind.Dto.YaeherMessageRemindIn)">
+            <summary>
+            短信记录表 List 
+            </summary>
+            <param name="YaeherMessageRemindInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.ParameterList(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            管理端基础参数
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherMobileParameterList(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            供调用的基础参数 List 
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AdminParameterList(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            管理端基础参数 List 
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherParameterList(Yaeher.SystemManage.Dto.SystemParameterIn)">
+            <summary>
+            基础参数 List 
+            </summary>
+            <param name="SystemParameterInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherUserInfo(Yaeher.YaeherUserIn)">
+            <summary>
+            用户基本信息
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DoctorInformation(Yaeher.YaeherDoctors.Dto.YaeherDoctorIn)">
+            <summary>
+            医生基本信息
+            </summary>
+            <param name="YaeherDoctorInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemConfigsManager(Yaeher.SystemConfig.SystemConfigs)">
+            <summary>
+            系统配置 新增
+            </summary>
+            <param name="SystemConfigsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemConfigsPage(Yaeher.SystemManage.Dto.SystemConfigsIn)">
+            <summary>
+            对接接口设置 Page
+            </summary>
+            <param name="SystemConfigsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemConfigsList(Yaeher.SystemManage.Dto.SystemConfigsIn)">
+            <summary>
+            对接接口设置 Page
+            </summary>
+            <param name="SystemConfigsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemConfigsBySystemType(Yaeher.SystemManage.Dto.SystemConfigsIn)">
+            <summary>
+            对接接口设置 Page
+            </summary>
+            <param name="SystemConfigsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SystemConfigsById(Yaeher.SystemManage.Dto.SystemConfigsIn)">
+            <summary>
+            对接接口设置 Byid
+            </summary>
+            <param name="SystemConfigsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherPhone(Yaeher.SystemConfig.YaeherPhone)">
+            <summary>
+            电话呼叫 新增
+            </summary>
+            <param name="YaeherPhoneInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.WXRoleList">
+            <summary>
+             获取平台角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateYaeherBanner(Yaeher.SystemConfig.YaeherBanner)">
+            <summary>
+            轮播图 新增
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateYaeherBanner(Yaeher.SystemConfig.YaeherBanner)">
+            <summary>
+            轮播图 修改
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteYaeherBanner(Yaeher.SystemConfig.YaeherBanner)">
+            <summary>
+            轮播图 删除
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherBannerPage(Yaeher.SystemManage.Dto.YaeherBannerIn)">
+            <summary>
+            轮播图 Page
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherBannerList(Yaeher.SystemManage.Dto.YaeherBannerIn)">
+            <summary>
+            轮播图 List 
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherBannerById(Yaeher.SystemManage.Dto.YaeherBannerIn)">
+            <summary>
+            轮播图 Byid
+            </summary>
+            <param name="YaeherBannerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateYaeherLabelConfig(Yaeher.SystemConfig.YaeherLabelConfig)">
+            <summary>
+            标签配置 新增
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateYaeherLabelConfig(Yaeher.SystemConfig.YaeherLabelConfig)">
+            <summary>
+            标签配置 修改
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteYaeherLabelConfig(Yaeher.SystemConfig.YaeherLabelConfig)">
+            <summary>
+            标签配置 删除
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherLabelConfigList(Yaeher.SystemManage.Dto.YaeherLabelConfigIn)">
+            <summary>
+            标签配置 List 
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.LabelConfigList(Yaeher.SystemManage.Dto.YaeherLabelConfigIn)">
+            <summary>
+            标签配置 List 患者端评价使用
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherLabelConfigById(Yaeher.SystemManage.Dto.YaeherLabelConfigIn)">
+            <summary>
+            标签配置 Byid
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherLabelListByCode(Yaeher.SystemManage.Dto.YaeherLabelConfigIn)">
+            <summary>
+            标签配置 List 
+            </summary>
+            <param name="YaeherLabelConfigInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateYaeherConditionalMenu(Yaeher.SystemConfig.YaeherConditionalMenu)">
+            <summary>
+            微信个性化菜单 新增
+            </summary>
+            <param name="YaeherConditionalMenuinfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateYaeherConditionalMenu(Yaeher.SystemConfig.YaeherConditionalMenu)">
+            <summary>
+            微信个性化菜单 修改
+            </summary>
+            <param name="YaeherConditionalMenuinfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteYaeherConditionalMenu(Yaeher.SystemConfig.YaeherConditionalMenu)">
+            <summary>
+            微信个性化菜单 删除
+            </summary>
+            <param name="YaeherConditionalMenuinfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherConditionalMenuList(Yaeher.YaeherConditionalMenuIn)">
+            <summary>
+            微信个性化菜单 List 
+            </summary>
+            <param name="YaeherConditionalMenuInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.YaeherConditionalMenuById(Yaeher.YaeherConditionalMenuIn)">
+            <summary>
+            微信个性化菜单 Byid
+            </summary>
+            <param name="YaeherConditionalMenuInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateWecharMenu(Yaeher.YaeherConditionalMenuIn)">
+            <summary>
+            
+            </summary>
+            <param name="yaeherConditionalMenuInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.TestWechar(Yaeher.SystemManage.Dto.TestWecharInfo)">
+            <summary>
+            微信跳转测试
+            </summary>
+            <param name="TestWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AchieveMessageTemplate(Yaeher.SystemManage.Dto.MessageTemplateIn)">
+            <summary>
+            获取微信消息模板
+            </summary>
+            <param name="MessageTemplateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateMessageTemplate(Yaeher.SystemConfig.YaeherMessageTemplate)">
+            <summary>
+            微信消息模板 修改
+            </summary>
+            <param name="MessageTemplateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.MessageTemplateById(Yaeher.SystemManage.Dto.MessageTemplateIn)">
+            <summary>
+            微信消息模板 Byid
+            </summary>
+            <param name="MessageTemplateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.MessageTemplatePage(Yaeher.SystemManage.Dto.MessageTemplateIn)">
+            <summary>
+            微信消息模板 Page
+            </summary>
+            <param name="MessageTemplateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateSendMessage(Yaeher.SystemConfig.SendMessageTemplate)">
+            <summary>
+            微信消息发送模板 新增
+            </summary>
+            <param name="SendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateSendMessage(Yaeher.SystemConfig.SendMessageTemplate)">
+            <summary>
+            微信消息发送模板 修改
+            </summary>
+            <param name="SendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteSendMessage(Yaeher.SystemConfig.SendMessageTemplate)">
+            <summary>
+            微信消息发送模板 删除
+            </summary>
+            <param name="SendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SendMessageList(Yaeher.SystemManage.Dto.SendMessageIn)">
+            <summary>
+            微信消息发送模板 List 
+            </summary>
+            <param name="SendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SendMessageId(Yaeher.SystemManage.Dto.SendMessageIn)">
+            <summary>
+            微信消息发送模板 Byid
+            </summary>
+            <param name="SendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SendWecharMessage(Yaeher.SystemConfig.SendMessageInfo)">
+            <summary>
+            
+            </summary>
+            <param name="sendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.WecharSendMessageById(Yaeher.SystemManage.Dto.WecharSendMessageIn)">
+            <summary>
+            微信消息模板 Byid
+            </summary>
+            <param name="WecharSendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.WecharSendMessagePage(Yaeher.SystemManage.Dto.WecharSendMessageIn)">
+            <summary>
+            微信消息模板 Page
+            </summary>
+            <param name="WecharSendMessageInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharList(Yaeher.SystemManage.Dto.AcceptTencentWecharIn)">
+            <summary>
+            接受微信用户发送消息 List 
+            </summary>
+            <param name="AcceptTencentWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharPage(Yaeher.SystemManage.Dto.AcceptTencentWecharIn)">
+            <summary>
+            接受微信用户发送消息 page 
+            </summary>
+            <param name="AcceptTencentWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharId(Yaeher.SystemManage.Dto.AcceptTencentWecharIn)">
+            <summary>
+            接受微信用户发送消息 Byid
+            </summary>
+            <param name="AcceptTencentWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.SendWechaMessgae(Yaeher.SystemConfig.AcceptTencentWechar)">
+            <summary>
+            发送消息  客服发送 请使用FromUserName
+            </summary>
+            <param name="AcceptTencentWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharStatePage(Yaeher.SystemManage.Dto.AcceptWecharStateIn)">
+            <summary>
+            发送消息状态 page 
+            </summary>
+            <param name="AcceptWecharStateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharStateId(Yaeher.SystemManage.Dto.AcceptWecharStateIn)">
+            <summary>
+            发送消息状态 Byid
+            </summary>
+            <param name="AcceptWecharStateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateWecharState(Yaeher.SystemConfig.AcceptWecharState)">
+            <summary>
+            更新聊天状态
+            </summary>
+            <param name="AcceptWecharStateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.JoinWecharState(Yaeher.SystemConfig.AcceptWecharState)">
+            <summary>
+            联系客户
+            </summary>
+            <param name="AcceptWecharStateInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UnReadyWecharList(Yaeher.SystemManage.Dto.AcceptTencentWecharIn)">
+            <summary>
+            
+            </summary>
+            <param name="AcceptTencentWecharInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.AcceptWecharMessage(Yaeher.SystemManage.Dto.AcceptWechar)">
+            <summary>
+            
+            </summary>
+            <param name="acceptWechar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateRelationLabelGroup(Yaeher.SystemConfig.RelationLabelGroup)">
+            <summary>
+            标签组管理 新增
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateRelationLabelGroup(Yaeher.SystemConfig.RelationLabelGroup)">
+            <summary>
+            标签组管理 修改
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteRelationLabelGroup(Yaeher.SystemConfig.RelationLabelGroup)">
+            <summary>
+            标签组管理 删除
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.RelationLabelGroupPage(Yaeher.SystemManage.Dto.RelationLabelGroupIn)">
+            <summary>
+            标签组管理 Page
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.RelationLabelGroupList(Yaeher.SystemManage.Dto.RelationLabelGroupIn)">
+            <summary>
+            标签组管理 List 
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.RelationLabelGroupById(Yaeher.SystemConfig.RelationLabelGroup)">
+            <summary>
+            标签组管理 Byid
+            </summary>
+            <param name="RelationLabelGroupInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.CreateQuickReply(Yaeher.SystemConfig.QuickReply)">
+            <summary>
+            医生快捷回复 新增
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.UpdateQuickReply(Yaeher.SystemConfig.QuickReply)">
+            <summary>
+            医生快捷回复 修改
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.DeleteQuickReply(Yaeher.SystemConfig.QuickReply)">
+            <summary>
+            医生快捷回复 删除
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.QuickReplyPage(Yaeher.SystemManage.Dto.QuickReplyIn)">
+            <summary>
+            医生快捷回复 Page
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.QuickReplyList(Yaeher.SystemManage.Dto.QuickReplyIn)">
+            <summary>
+            医生快捷回复 List 
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.SystemManageController.QuickReplyById(Yaeher.SystemConfig.QuickReply)">
+            <summary>
+            医生快捷回复 Byid
+            </summary>
+            <param name="QuickReplyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.TencentPayController">
+            <summary>
+            微信支付
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentPayController.#ctor(Abp.Runtime.Session.IAbpSession,Yaeher.YaeherDoctors.IServiceMoneyListService,Yaeher.IUserManagerService,Yaeher.IYaeherUserService,Yaeher.SystemManage.ISystemConfigsService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.YaeherDoctors.IIncomeDevideService,Yaeher.Consultation.IConsultationService,Yaeher.IOrderManageService,Yaeher.IOrderTradeRecordService,Yaeher.DoctorReport.IDoctorIncomeService,Yaeher.CompaniesReport.ICorporateIncomeTotalService,Yaeher.DoctorReport.IIncomeDetailsService,Yaeher.EventBus.IHangFireJobService,Yaeher.SystemManage.ISystemParameterService,Yaeher.SystemManage.IDoctorOnlineRecordService)">
+            <summary>
+            Home 构造函数
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentPayController.ShareAsync(Senparc.Weixin.TenPay.V3.RequestHandler,System.String,System.String,System.String)">
+            <summary>
+            【异步方法】退款申请接口
+            </summary>
+            <param name="PackageRequestHandler"></param>
+            <param name="url"></param>
+            <param name="cert">证书绝对路径，如@"F:\apiclient_cert.p12"</param>
+            <param name="certPassword">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentPayController.CertPostAsync(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            【异步方法】带证书提交
+            </summary>
+            <param name="cert">证书绝对路径</param>
+            <param name="certPassword">证书密码</param>
+            <param name="data">数据</param>
+            <param name="url">Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentPayController.WXOAuthPay(Yaeher.Common.TencentCustom.TencentPayModel)">
+            <summary>
+            微信pay信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentPayController.IncomeTotal(Yaeher.HangFire.HangFireJob)">
+            <summary>
+            结算统计
+            </summary>
+            <param name="hangFireJobInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.#ctor(Yaeher.IYaeherUserService,Yaeher.SystemManage.ISystemConfigsService,Yaeher.SystemManage.ISystemParameterService,Yaeher.IYaeherUserPaymentService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.SystemManage.IAcceptTencentWecharService,Yaeher.SystemManage.IAcceptWecharStateService,Yaeher.SystemManage.ISystemTokenService,Yaeher.YaeherDoctors.IYaeherDoctorService)">
+            <summary>
+            Home 构造函数
+            </summary>
+            <param name="yaeherUserService"></param>
+            <param name="systemConfigsService"></param>
+            <param name="systemParameterService"></param>
+            <param name="yaeherUserPaymentService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="acceptTencentWecharService"></param>
+            <param name="acceptWecharStateService"></param>
+            <param name="systemTokenService"></param>
+            <param name="yaeherDoctorService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.wxmsg(System.String,System.String,System.String,System.String)">
+            <summary>
+            微信绑定urltoken接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.WXMSG(System.String,System.String,System.String,System.String)">
+            <summary>
+            微信消息事件接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.FocusOn(System.Xml.Linq.XDocument)">
+            <summary>
+            公众号关注事件
+            </summary>
+            <param name="requestDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.UnFocusOn(System.Xml.Linq.XDocument)">
+            <summary>
+            取消关注
+            </summary>
+            <param name="requestDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.AcceptWechar(System.Xml.Linq.XDocument)">
+            <summary>
+            接受消息
+            </summary>
+            <param name="requestDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.TencentWeCharController.WXJSTicket(Yaeher.Common.TencentCustom.TencentTicletModel)">
+            <summary>
+            获取微信js-sdk授权
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController">
+            <summary>
+            用户权限管理
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.#ctor(Yaeher.YaeherAuth.IYaeherModuleService,Yaeher.YaeherAuth.IYaeherRoleModuleService,Yaeher.YaeherAuth.IYaeherRoleService,Yaeher.YaeherAuth.IYaeherUserRoleService,Abp.Runtime.Session.IAbpSession,Yaeher.SystemManage.IYaeherOperListService)">
+            <summary>
+            
+            </summary>
+            <param name="yaeherModuleService"></param>
+            <param name="yaeherRoleModuleService"></param>
+            <param name="yaeherRoleService"></param>
+            <param name="yaeherUserRoleService"></param>
+            <param name="session"></param>
+            <param name="yaeherOperListService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.CreateYaeherRole(Yaeher.YaeherRole)">
+            <summary>
+            角色管理 新增
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.UpdateYaeherRole(Yaeher.YaeherRole)">
+            <summary>
+            角色管理 修改
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.DeleteYaeherRole(Yaeher.YaeherRole)">
+            <summary>
+            角色管理 删除
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherRolePage(Yaeher.YaeherAuth.Dto.YaeherRoleIn)">
+            <summary>
+            角色管理 Page
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherRoleList(Yaeher.YaeherAuth.Dto.YaeherRoleIn)">
+            <summary>
+            角色管理 List 
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherRoleById(Yaeher.YaeherAuth.Dto.YaeherRoleIn)">
+            <summary>
+            角色管理 Byid
+            </summary>
+            <param name="YaeherRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.CreateYaeherUserRole(Yaeher.YaeherAuth.Dto.YaeherUserRoleJSON)">
+            <summary>
+            角色与用户关联表 新增
+            </summary>
+            <param name="YaeherUserRoleJSON"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherUserRoleByUserID(Yaeher.YaeherAuth.Dto.YaeherUserRoleIn)">
+            <summary>
+            用户与角色关系List
+            </summary>
+            <param name="YaeherUserRoleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.CreateYaeherModule(Yaeher.YaeherAuth.Dto.YaeherModuleNode)">
+            <summary>
+            
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.UpdateYaeherModule(Yaeher.YaeherAuth.Dto.YaeherModuleNode)">
+            <summary>
+            菜单表 修改
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.DeleteYaeherModule(Yaeher.YaeherAuth.Dto.YaeherModuleNode)">
+            <summary>
+            菜单表 删除
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherModuleList(Yaeher.YaeherAuth.Dto.YaeherModuleIn)">
+            <summary>
+            菜单表 List 
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherModuleUpperList(Yaeher.YaeherAuth.Dto.YaeherModuleIn)">
+            <summary>
+            菜单上级菜单 List 
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherModuleById(Yaeher.YaeherAuth.Dto.YaeherModuleIn)">
+            <summary>
+            菜单表 Byid
+            </summary>
+            <param name="YaeherModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.CreateYaeherRoleModule(Yaeher.YaeherAuth.Dto.YaeherRoleModuleJSon)">
+            <summary>
+            菜单与角色关联表 新增
+            </summary>
+            <param name="YaeherRoleModuleJSon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherAuthController.YaeherRoleModuleList(Yaeher.YaeherAuth.Dto.YaeherRoleModuleIn)">
+            <summary>
+            菜单与角色关联表 List  
+            </summary>
+            <param name="YaeherRoleModuleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController">
+            <summary>
+            注册用户信息
+            </summary>
+        </member>
+        <member name="F:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController._yaeherDoctorService">
+            <summary>
+            医生信息
+            </summary>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.#ctor(Yaeher.IYaeherUserService,Yaeher.IYaeherUserPaymentService,Yaeher.SystemManage.ISystemParameterService,Abp.Domain.Uow.IUnitOfWorkManager,Yaeher.IUserManagerService,Abp.Runtime.Session.IAbpSession,Yaeher.YaeherDoctors.IDoctorFileApplyService,Yaeher.YaeherDoctors.IDoctorEmploymentService,Yaeher.YaeherDoctors.IDoctorClinicApplyService,Yaeher.ClinicManage.IClinicDoctorReltionService,Yaeher.SystemManage.IYaeherOperListService,Yaeher.YaeherDoctors.IServiceMoneyListService,Yaeher.YaeherDoctors.IYaeherDoctorService,Yaeher.MessageRemind.IYaeherMessageRemindService,Yaeher.SystemManage.ISystemTokenService,Yaeher.SystemManage.IAcceptTencentWecharService)">
+            <summary>
+            用户信息
+            </summary>
+            <param name="yaeherUserService"></param>
+            <param name="yaeherUserPaymentService"></param>
+            <param name="systemParameterService"></param>
+            <param name="unitOfWorkManager"></param>
+            <param name="userManagerService"></param>
+            <param name="session"></param>
+            <param name="doctorFileApplyService"></param>
+            <param name="doctorEmploymentService"></param>
+            <param name="doctorClinicApplyService"></param>
+            <param name="clinicDoctorReltionService"></param>
+            <param name="yaeherOperListService"></param>
+            <param name="serviceMoneyListService"></param>
+            <param name="yaeherDoctorService"></param>
+            <param name="yaeherMessageRemindService"></param>
+            <param name="systemTokenService"></param>
+            <param name="acceptTencentWecharService"></param>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.CreateMobileYaeherUser(Yaeher.YaeherUserIn)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.CreateYaeherUser(Yaeher.YaeherUserIn)">
+            <summary>
+            用户注册  手动创建用户
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.UpdateYaeherUser(Yaeher.YaeherUserIn)">
+            <summary>
+            用户修改
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.DeleteYaeherUser(Yaeher.YaeherUser)">
+            <summary>
+            用户删除
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserPage(Yaeher.YaeherUserIn)">
+            <summary>
+            获取注册用户信息 Page
+            </summary>
+            <param name="YaeherUserInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserList(Yaeher.YaeherUserIn)">
+            <summary>
+            获取注册用户信息 List 
+            </summary>
+            <param name="YaeherUserInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserById(Yaeher.YaeherUserIn)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="YaeherUserInfo"> YaeherUserIn 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUser(Yaeher.YaeherUserMsg)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="YaeherUserMsg"> YaeherUserMsg 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserByNameAndPwd(Yaeher.YaeherUserIn)">
+            <summary>
+            获取注册用户信息 Byname and pwd
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserByIDArray(Yaeher.YaeherUserIDArray)">
+            <summary>
+            获取注册用户信息 ByIDArray
+            </summary>
+            <param name="YaeherUserIDArrayInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.UpdateUserWXRole(Yaeher.YaeherWecharUser)">
+            <summary>
+            修改移动端角色
+            </summary>
+            <param name="YaeherDoctorsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.UserWecharRoleByUserID(Yaeher.YaeherWecharUser)">
+            <summary>
+            用户与角色关系List
+            </summary>
+            <param name="YaeherDoctorsInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserPaymentType(Yaeher.SecretModel)">
+            <summary>
+            用户账户类型获取
+            </summary>
+            <param name="YaeherUserPaymentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.CreateYaeherUserPayment(Yaeher.YaeherUserPayment)">
+            <summary>
+            用户账户新增
+            </summary>
+            <param name="YaeherUserPaymentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.UpdateYaeherUserPayment(Yaeher.YaeherUserPayment)">
+            <summary>
+            用户账户修改
+            </summary>
+            <param name="YaeherUserPaymentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserPaymentByUserID(Yaeher.YaeherUserPayment)">
+            <summary>
+            YaeherUserPaymentByDocID
+            </summary>
+            <param name="YaeherUserPaymentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.DeleteYaeherUserPayment(Yaeher.YaeherUserPayment)">
+            <summary>
+            用户删除
+            </summary>
+            <param name="YaeherUserPaymentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserPaymentPage(Yaeher.YaeherUserPaymentIn)">
+            <summary>
+            获取注册用户账户信息 Page
+            </summary>
+            <param name="YaeherUserPaymentInfo"> YaeherUserPaymentInfo 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserPaymentList(Yaeher.YaeherUserPaymentIn)">
+            <summary>
+            获取注册用户账户信息 List 
+            </summary>
+            <param name="YaeherUserPaymentInfo"> YaeherUserPaymentInfo 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserByPaymentId(Yaeher.YaeherUserPaymentIn)">
+            <summary>
+            获取注册用户账户信息 Byid
+            </summary>
+            <param name="YaeherUserPaymentInfo"> YaeherUserPaymentInfo 数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserDetailInfo(Yaeher.YaeherUser)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="YaeherUserInfo"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.YaeherUserModule(Yaeher.YaeherUserInfo)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="yaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.TestGetAllFocusUser(Yaeher.YaeherUserInfo)">
+            <summary>
+            获取用户信息,打上标签
+            </summary>
+            <param name="yaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.UserAuthentication(Yaeher.YaeherUserIn)">
+            <summary>
+            修改用户电话号码  修改用户密码
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YaeherAdminAPI.Web.Host.Controllers.YaeherUserController.ChangePassword(Yaeher.YaeherUserIn)">
+            <summary>
+            修改用户电话号码  修改用户密码
+            </summary>
+            <param name="YaeherUserInfo"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

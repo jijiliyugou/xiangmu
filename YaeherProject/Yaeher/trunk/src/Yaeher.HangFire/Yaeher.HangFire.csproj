@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.6.21" />
+    <PackageReference Include="Hangfire.Dashboard.BasicAuthorization" Version="1.0.0" />
+    <PackageReference Include="Hangfire.MySql.Core" Version="2.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yaeher.Common\Yaeher.Common.csproj" />
+  </ItemGroup>
+
+</Project>

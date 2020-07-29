@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>修改门诊排班</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+	<body>
+		<header class="head">
+			修改门诊排班
+		</header>
+		<div class="content">
+			<div class="consultationFrom">
+				<form class="mui-input-group">
+					<div class="mui-input-row">
+				        <label style="width: 20%;">时间</label>
+				    	<input style="width: 80%;" type="text" class="mui-input-clear" placeholder="请选择时间">
+				    </div>
+					<div class="mui-input-row" style="display: flex;">
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 15px;">时段</label>
+						</div>
+					    <div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">上午</label>
+							<input name="checkbox1" type="checkbox" checked>
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">下午</label>
+							<input name="checkbox2" type="checkbox">
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">晚上</label>
+							<input name="checkbox3" type="checkbox">
+						</div> 
+					</div>
+					<div class="mui-input-row" style="display: flex;">
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 15px;">重复方式</label>
+						</div>
+					    <div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">每天</label>
+							<input name="checkbox1" type="checkbox" checked>
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">每周</label>
+							<input name="checkbox2" type="checkbox">
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">不</label>
+							<input name="checkbox3" type="checkbox">
+						</div> 
+					</div>
+					<div class="mui-input-row" style="display: flex;">
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 15px;">门诊类型</label>
+						</div>
+					    <div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">普通</label>
+							<input name="checkbox1" type="checkbox" checked>
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">特诊</label>
+							<input name="checkbox2" type="checkbox">
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">专家</label>
+							<input name="checkbox3" type="checkbox">
+						</div> 
+					</div>
+				    <div class="mui-input-row">
+				        <label style="width: 20%;">门诊地点</label>
+				    	<input style="width: 80%;" type="text" class="mui-input-clear" placeholder="请输入门诊地点">
+				    </div>
+				    <div class="mui-input-row">
+				        <label style="width: 20%;">挂号费</label>
+				    	<input style="width: 80%;" type="text" class="mui-input-clear" placeholder="请输挂号费">
+				    </div>
+				    <div class="mui-input-row" style="display: flex;">
+					    <div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 15px;">是否显示</label>
+						</div>
+					    <div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">开启</label>
+							<input name="checkbox1" type="checkbox" checked>
+						</div> 
+						<div style="flex: 1;" class="mui-input-row mui-checkbox mui-left">
+							<label style="width: 100%; padding-left: 50px;">关闭</label>
+							<input name="checkbox2" type="checkbox">
+						</div> 
+					</div>
+					<div class="mui-input-row" style="padding: 10px; height: 150px;">
+						<a href="arrange.html"><button type="button" class="applyConsulation">保存</button></a>
+				    </div>
+				    
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

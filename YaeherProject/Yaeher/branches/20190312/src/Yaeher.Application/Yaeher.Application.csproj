@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>Yaeher.Application</AssemblyName>
+    <PackageId>Yaeher.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Yaeher</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\SVN\trunk\src\Yaeher.Application\Yaeher.Application.xml</DocumentationFile>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="MultiTenancy\**" />
+    <Compile Remove="Persons\**" />
+    <Compile Remove="Roles\**" />
+    <Compile Remove="Sessions\**" />
+    <Compile Remove="Users\**" />
+    <EmbeddedResource Remove="MultiTenancy\**" />
+    <EmbeddedResource Remove="Persons\**" />
+    <EmbeddedResource Remove="Roles\**" />
+    <EmbeddedResource Remove="Sessions\**" />
+    <EmbeddedResource Remove="Users\**" />
+    <None Remove="MultiTenancy\**" />
+    <None Remove="Persons\**" />
+    <None Remove="Roles\**" />
+    <None Remove="Sessions\**" />
+    <None Remove="Users\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="PagedListExtension.cs" />
+    <Compile Remove="RepositoryBaseModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yaeher.Common\Yaeher.Common.csproj" />
+    <ProjectReference Include="..\Yaeher.Core\Yaeher.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Release\Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

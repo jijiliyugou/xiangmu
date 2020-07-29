@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>请填写咨询内容</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+	<body>
+		<header class="head">
+			请填写咨询内容
+		</header>
+		<div class="content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+			        <a href="doctorDetail.html" class="mui-navigate-right">
+			        	<div class="answer">
+			        		<div style="width: 50px;" class="">
+			        			向他咨询
+			        		</div>
+			        		<div class="doctorAn">
+			        			<img src="../images/lu.png" style="width: 20px; height: 20px; border-radius: 3px;" />
+			        			<span>王红霞</span>
+			        		</div>
+			        	</div>
+			        </a>
+			  </li>
+			</ul>
+			<div class="consultationFrom">
+				<form class="mui-input-group">
+				    <div class="mui-input-row">
+				        <label>咨询人</label>
+				    	<input type="text" class="mui-input-clear" placeholder="请添加咨询人">
+				    </div>
+				    <div class="mui-input-row">
+				        <label>疾病类型</label>
+				    	<input type="text" class="mui-input-clear" placeholder="请选择疾病类型">
+				    </div>
+				    <div class="mui-input-row">
+				        <label>所在地</label>
+				    	<input type="text" class="mui-input-clear" placeholder="请输入您所在城市">
+				    </div>
+				    <div class="mui-input-row" style="height: 145px; padding-bottom: 20px; position: relative;"><label>问题描述</label>
+						<textarea id="hcqk" class="form" rows="5" maxlength="300" placeholder="请详细描述您的患病时间，症状，相关医生的诊断等等"></textarea>
+						<span style="position: absolute; bottom: 10px; right: 20px; color: #666;">可输入500字</span>
+					</div>
+					<div class="mui-input-row" style="height: 145px; padding-bottom: 20px; position: relative;"><label style="padding: 11px 0px 11px 10px;">图片\视频上传</label>
+						<div class="uploadRow">
+							<div class="uploadImg">+</div>
+						</div>
+					</div>
+					<div class="mui-input-row" style="padding: 10px; height: 150px;">
+						<a href="paySuccess.html"><button type="button" class="applyConsulation">提交并支付￥48元</button></a>
+				    </div>
+				    
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

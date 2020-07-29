@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>医生详情</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+	<body>
+		<header class="head">
+			医生姓名
+		</header>
+		<div class="content">
+			<div class="doctorInfo">
+				<div class="collection">收藏</div>
+				<img src="../images/demo.png" alt="avatar" />
+				<div class="infoCase">
+					<p class="doctorName">王子洋</h3>
+					<p style="padding-top: 5px;"><span class="star5"></span>4.9</p>
+					<p>接单数：158</p>
+					<p>平均回复时长：10小时</p>
+					<p>中国人民解放军第九四医院 主治医生 从业九年</p>
+				</div>
+			</div>
+			<div class="diseaseInfo">
+				<span>湿疹</span>
+				<span>皮炎</span>
+				<span>荨麻疹</span>
+				<span>白癜风</span>
+			</div>
+			<div class="blackTop">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell consultList">
+						<div class="consultLeft">图文咨询</div>
+						<div class="consultRight">
+							￥49/次
+							<a href="agreement.html"><button>咨询</button></a>
+						</div>
+				  	</li>
+				  	<li class="mui-table-view-cell consultList">
+						<div class="consultLeft">电话咨询</div>
+						<div class="consultRight">
+							￥100/10分钟
+							<a href="agreement.html"><button>咨询</button></a>
+						</div>
+				  	</li>
+				  	<li class="mui-table-view-cell consultList">
+					 	<a style="width: 100%;" href="../doctor/arrange.html" class="mui-navigate-right">
+					 		门诊排班
+					 	</a>
+				  	</li>
+				</ul>  
+			</div>
+			<!--<div class="blackTop blackCase">
+				<div class="blackTitle">擅长</div>
+				<p>对婴儿皮肤病如湿疹，特应性皮炎，胎记等治疗经验丰富。</p>
+				<p>对婴儿皮肤病如湿疹，特应性皮炎，胎记等治疗经验丰富。对婴儿皮肤病如湿疹，特应性皮炎，胎记等治疗经验丰富。</p>
+			</div>	-->
+			<div class="blackTop blackCase">
+				<div class="blackTitle">简介</div>
+				<p>对婴儿皮肤病如湿疹，特应性皮炎，胎记等治疗经验丰富。</p>
+			</div>	
+			<div class="blackTop blackCase">
+				<div class="blackTitle">执业经历</div>
+				<p>中国人民解放军第九四医院/皮肤病与性病科</p>
+			</div>
+			<div style="position: relative;" class="listTitle">
+				发表的文章
+				<a style="position: absolute; right: 10px; top: 10px;" href="articleList.html">查看更多》</a>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+			        <a href="articleDetail.html" class="mui-navigate-right articleList">
+			        	<p class="articleHint hintRed">点击进入文章详情</p>
+			        	<img src="../images/lu.png" align="articleList" />
+			        	<div class="articleCase">
+			        		<p class="blod">文字标题</p>
+			        		<p>文章简短的一个描述</p>
+			        	</div>
+			        </a>
+			   </li>
+			   <li class="mui-table-view-cell">
+			        <a href="articleDetail.html" class="mui-navigate-right articleList">
+			        	<img src="../images/lu.png" align="articleList" />
+			        	<div class="articleCase">
+			        		<p class="blod">文字标题</p>
+			        		<p>文章简短的一个描述</p>
+			        	</div>
+			        </a>
+			   </li>
+			   <li class="mui-table-view-cell">
+			        <a href="articleDetail.html" class="mui-navigate-right articleList">
+			        	<img src="../images/lu.png" align="articleList" />
+			        	<div class="articleCase">
+			        		<p class="blod">文字标题</p>
+			        		<p>文章简短的一个描述</p>
+			        	</div>
+			        </a>
+			   </li>
+			</ul>
+			<div style="position: relative;" class="listTitle">
+				演讲的课程
+				<a style="position: absolute; right: 10px; top: 10px;" href="classroom.html">查看更多》</a>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+			        <a class="mui-navigate-right articleList" href="doctorDetail.html">
+			        	<p style="top: 32px;" class="articleHint hintRed">点击进入课程详情</p>
+			        	<img src="../images/lu.png" align="articleList" />
+			        	<div class="articleCase">
+			        		<p class="blod">教孩子吃饭</p>
+			        		<p>课程时间：30分钟</p>
+			        		<p>这是一个教孩子吃饭的视频</p>
+			        	</div>
+			        </a>
+			  	</li>
+			  	<li class="mui-table-view-cell">
+			        <a class="mui-navigate-right articleList" href="doctorDetail.html">
+			        	<p style="top: 32px;" class="articleHint hintRed">点击进入课程详情</p>
+			        	<img src="../images/lu.png" align="articleList" />
+			        	<div class="articleCase">
+			        		<p class="blod">教孩子吃饭</p>
+			        		<p>课程时间：30分钟</p>
+			        		<p>这是一个教孩子吃饭的视频</p>
+			        	</div>
+			        </a>
+			  	</li>
+			</ul>
+		</div>
+	</body>
+</html>

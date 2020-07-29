@@ -1,0 +1,232 @@
+body {background: #f1f1f1; font-size: 14px;}
+h1,h2,h3,h4,p,ul,li{margin: 0; padding: 0;}
+input, select, textarea, p{font-size: 14px;}
+a {cursor: pointer;}
+.head {color: #333; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #eee;}
+.content {background: #f1f1f1; padding-bottom: 40px;}
+.contentTop {width: 100%; height: 250px; background: #35A3FF;}
+.logo {padding: 50px 0 10px; display: flex; justify-content: center; align-items: center; position: relative;}
+.logo img {width: 50px; height: 50px; display: block; border-radius: 10px; }
+.logo .avatar{width: 20px; height: 20px; border-radius: 50%; position: absolute; top: 20px; right: 20px;}
+.logo .avatar img {width: 100%; height: 100%;}
+.logo > p {position: absolute; width: 72px; top: 10px; right: 50px;}
+.selectPeople {position: absolute; top: 32px; left: 0px; right: 0; display: flex;}
+.selectPeople p {flex: 1; color: #333; text-align: center; font-size: 14px; padding: 5px 20px; border: 1px solid #333; margin-top: 5px;}
+.logoTitle {color: #fff; font-size: 14px; line-height: 20px; padding: 0 20px;}
+.logoTitle h3 {text-align: center; font-size: 16px; line-height: 26px;}
+.logoTitle p {color: #fff;}
+.content .search input {background: #fff; font-size: 14px; margin-bottom: 0;}
+.listTitle {font-size: 14px; padding: 10px 20px;}
+.relative {position: relative;}
+.hintRed{ font-size: 14px; color: #FF0000;}
+.docTitle {font-size: 14px; font-weight: 600; color: #333;}
+.mui-navigate-right p {white-space: normal;}
+.avaterList {overflow: hidden; background: #ddd; padding: 10px; border-radius: 5px; margin: 5px 0;}
+.avaterList img {float: left; width: 30px; height: 30px; margin-right: 5px; border-radius: 3px;}
+.content .docAfter:after {top: 105px; right: 20px; color: #999;}
+.avaterNub {position: absolute; right: 25px; top: 17px; font-size: 12px; color: #666;}
+.avaterHint { position: absolute; right: 40px; top: 16px;}
+.articleList {overflow: hidden; display: flex; position: relative;}
+.articleList img {float: left; width: 60px; height: 60px; border-radius: 8px;}
+.sort {display: flex; background: #fff; margin: 10px 0 0 0;}
+.sort > div {flex: 1; color: #FF0000; line-height: 30px; text-align: center; border-right: 1px solid #ccc; position: relative;}
+.sort > div:after{ 
+	content: '';
+	width:0;
+    height:0;
+    vertical-align: bottom;
+    margin-left: 5px;
+    line-height: 10px;
+    border-width:5px 5px 0;
+    border-style:solid;
+    border-color:#FF0000 transparent transparent;}
+/*.infoWeChat img {border-radius: 0;}*/
+.articleList div {float: left; flex: 1; padding-left: 10px;}
+.articleList .blod {color: #333;}
+.articleList .articleHint { position: absolute; right: 30px; top: 30px; color: #2AC845;}
+.articleList .hintRed {color: #FF0000;}
+.callMe {padding: 30px 0; display: flex; align-items: center; justify-content: center; background: #fff;}
+.qrCode {width: 100px;}
+.qrCode img { width: 100px; height: 100px;}
+.qrCode p {color: #333; font-size: 12px; margin-top: 5px;}
+.blackBlock {width: 100%; height: 50px; background: #ccc;}
+
+/*医生列表*/
+.diseaseCase {padding: 10px;}
+.diseaseList {margin-top: 10px; background: #faf; color: #333; padding: 15px 10px; font-size: 14px;}
+.doctorDetailList .articleList .articleHint{top: 43px; right: 35px;}
+
+/*医生详情*/
+.doctorInfo {position: relative;}
+.doctorInfo img {width: 100%; height: 260px;}
+.collection {color: #333; font-size: 12px; line-height: 12px; padding: 5px; border-radius: 3px; border: 1px solid #333; position: absolute; right: 10px; top: 10px;}
+.infoCase {position: absolute; left: 15px; bottom: 10px;}
+.infoCase p {color: #fff; font-size: 12px; margin-bottom: 0; line-height: 16px;}
+.infoCase .doctorName {font-size: 18px;}
+.diseaseInfo {padding: 15px 10px;}
+.diseaseInfo span {display: inline-block; margin-right: 3px; padding: 4px 5px; font-size: 12px; color: #666; line-height: 12px; border-radius: 10px; border: 1px solid #999;}
+.blackTop {border-top: 10px solid #ccc;}
+.consultList {display: flex;}
+.consultList > div {flex: 1; line-height: 30px;}
+.consultLeft {text-align: left;}
+.consultRight {text-align: right; vertical-align: middle; font-size: 14px; color: #FF5053;}
+.blackCase {padding: 20px 10px 20px 30px; background: #fff;}
+.blackTitle {font-size: 16px; color: #333; padding-bottom: 5px;}
+.blackCase p {color: #666; margin-bottom: 0;}
+
+/*个人中心*/
+.userAvatar {width: 100%; height: 170px; display: flex; justify-content: center; align-items: center; background: #35A3FF;}
+.userInfo { width: 200px; text-align: center;}
+.userInfo img {width: 50px; height: 50px;}
+.userInfo p {font-size: 14px; color: #333; margin-bottom: 0;}
+.userList {border-top: 10px solid #ccc;}
+
+/*咨询须知*/
+.contentP { padding: 10px;}
+.agreeOk {width: 100%; height: 40px; color: #fff; background: #35A3FF; line-height: 40px; text-align: center; border-radius: 5px; display: inline-block; margin: 10px 0 ;}
+
+/*我的医生*/
+.userDoctor { padding: 10px;}
+
+/*我的咨询*/
+.recordCase {padding: 0px 10px; font-size: 12px;}
+.recordList .mui-table-view-cell:after {height: 5px;}
+.recordTop {display: flex; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+.recordRight {width: 50px; color: #2AC845; text-align: right;}
+.recordLeft {flex: 1; display: flex;}
+.recordAvatar {width: 70px;}
+.recordTitle {flex: 1; text-align: left;}
+.recordBottom {padding-top: 10px;}
+.userTime {display: flex;}
+.userTime p {flex: 1;}
+
+/*咨询详情*/
+.answer {display: flex; font-size: 14px;}
+.doctorAn {flex: 1; text-align: right; padding-right: 20px;}
+.doctorAn img, .doctorAn span {display: inline-block; vertical-align: middle;}
+.doctorS img, .doctorS span {display: inline-block; vertical-align: middle;}
+.doctorS span {padding-left: 10px;}
+.condition {margin: 10px 0; padding: 10px; background: #fff; font-size: 12px; color: #999;}
+.conditionP {padding-bottom: 10px;}
+.condition span {color: #333;}
+.condition .paList li {border-top: 1px dashed #eee; padding: 10px 0;}
+
+.doctorAnswer {padding: 10px 20px 10px 40px; background: #fff; font-size: 12px; position: relative;}
+.doctorAnswer p {font-size: 12px; color: #333;}
+.doctorTitle {display: flex;}
+.doctorTitle p {flex: 1; color: #333;}
+.doctorAnswer img {position: absolute; top: 10px; left: 10px; width: 20px; height: 20px; border-radius: 5px;}
+.notice {background: #fff; margin-top: 10px; padding: 10px;}
+.notice .href{width: 100%; height: 40px; color: #fff; text-align: center; line-height: 40px; font-size: 16px; background: #35A3FF; display: block; border-radius: 5px;}
+
+/*填写咨询内容*/
+.consultationFrom {margin: 10px 0; }
+.consultationFrom .mui-input-row label {width: 27%;}
+.consultationFrom .mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea {width: 73%;}
+.uploadRow {width: 73%; float: right; padding: 30px 0;}
+.uploadImg {font-size: 50px; padding: 20px; border: 2px dashed #aaa; width: 75px;}
+.applyConsulation{width: 100%; height: 40px; color: #fff; text-align: center; font-size: 16px; background: #35A3FF; display: block; border-radius: 5px;}
+
+/*看问答*/
+.lookHint {color: #fff; font-size: 14px; background: #35A3FF; padding: 3px 5px; line-height: 14px; border-radius: 10px; display: inline-block;}
+.lookP p {color: #333; padding-top: 10px;}
+.clickOk {display: flex; justify-content: center; align-items: center; padding: 20px 0;}
+.clickOk div {padding: 5px 10px; border: 1px solid #666; color: #666;}
+
+/*导航*/
+.navBar {display: flex; height: 40px; color: #333; font-size: 14px; text-align: center; line-height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background: #fff;}
+.navBar li {flex: 1; list-style: none; border-right: 1px solid #ddd;}
+.navBar li a {display: inline-block; width: 100%; height: 100%;}
+/*医生门诊*/
+.outList .articleList img {width: 40px; height: 40px;}
+.outDList .articleList img {width: 40px; height: 40px;}
+.content .blackTop .doctorD {display: flex;}
+.content .userList .doctorD {display: flex;}
+.doctorD > div {flex: 1;}
+.doctorD .consultLeft {color: #333;}
+.doctorD .consultRight {color: #666; padding-right: 20px;}
+.newDD {display: flex;}
+.newDD > div {flex: 1;}
+.newDD .consultLeft {color: #333;}
+.newDD .consultRight {padding-right: 10px; color: #666;}
+.docInfo {margin: 0; padding: 0 10px;}
+.doctorInfo img {display: block;}
+.docInfo li {color: #666;}
+.searchBox {display: flex;}
+.searchBox div {flex: 1;}
+
+/*咨询详情*/
+.conPosition {position: relative;}
+.conPosition li {list-style: none; color: #FF0000;}
+.conPosition ul {position: absolute; right: 95px; bottom: -16px;}
+.weChat {padding: 10px 60px; background: #ddd; position: relative;}
+.weTime {display: flex; justify-content: center; align-items: center; padding-bottom: 10px;}
+.weTime div {padding: 3px 5px; background: #aaa; color: #fff; font-size: 12px; border-radius: 3px;}
+.weChat p {font-size: 12px; color: #fff;}
+.weTitle {background: #0062CC; padding: 10px; position: relative;}
+.weTitle img {position: absolute; right: -50px; top: 0; width: 40px; height: 40px; border-radius: 5px;}
+.infoTitle {background: #fff;}
+.infoTitle p {color: #333;}
+.infoTitle img {left: -50px; top: 0; right: 0;}
+.sendOut {height: 50px; border-top: 1px solid #999; text-align: center; padding: 10px 0; overflow: hidden; background: #ccc;}
+.sendOut span {display: inline-block; height: 100%; float: left; line-height: 29px;}
+.dapartOk button { border: none; color: #fff; background: #0062CC; width: 100%; height: 40px;}
+.weTime {margin-top: 10px;}
+.weHint {position: absolute; border: 1px solid #333; font-size: 12px; line-height: 12px; padding: 5px; top: 10px; right: 10px;}
+/*我的二维码*/
+.qrCase {background: #fff; margin: 30px 20px; padding: 30px;}
+.qrTop {display: flex;}
+.qrTop img {display: block; width: 50px;height: 50px; border-radius: 5px;}
+.qrTop > div {flex: 1; padding-left: 30px; }
+.qrImg {display: flex; justify-content: center; align-items: center; padding: 10px 0;}
+.qrImg img {display: block; width: 230px; height: 230px;}
+
+/*我的服务*/
+.doctorSe {line-height: 40px;}
+.incomeCase, .incomeCase1 {display: flex;}
+.incomeCase div {flex: 1; text-align: left; font-size: 16px;}
+.incomeCase1 div {flex: 1;}
+
+/*星级*/
+.star5 {background: url(../images/star1.png) -13px -133px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star4 {background: url(../images/star1.png) -13px -113px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star3 {background: url(../images/star1.png) -13px -93px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star2 {background: url(../images/star1.png) -13px -73px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star1 {background: url(../images/star1.png) -13px -53px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star0 {background: url(../images/star1.png) -13px -153px no-repeat; display: inline-block; width: 79px; height: 14px;}
+
+/*article*/
+.articleExamine {position: absolute; top: 10px; right: 10px; color: #2AC845;}
+
+/*医生审核*/
+.cardLook, .cardTitle { display: flex;}
+.cardTitle p {flex: 1;text-align: center; color: #333; padding-top: 10px;}
+.cardLook img {display: block; flex: 1; padding: 10px; width: 150px; height: 150px;}
+
+/*评价统计*/
+.evaluateName {display: flex;}
+.evaluateName > div {flex: 1; line-height: 16px;}
+.evaluateS .mui-table-view:before {background: none;}
+.evaluateS .mui-table-view:after {background: none;}
+.evaluateS .mui-table-view-cell:after {background: none;}
+
+.eavaluateArticle {word-break: break-all;text-overflow: ellipsis;display: -webkit-box; -webkit-box-orient: vertical;-webkit-line-clamp: 3; overflow: hidden;font-size: 12px; color: #333; padding: 5px 0;}
+.evaluateTime {font-size: 12px; color: #35A3FF;}
+.evaCase {padding: 20px;}
+
+.applyList {display: flex;}
+.applyList > div {flex: 1;}
+
+.doctorAdmin {display: flex;}
+.doctorAdmin img {display: block; width: 40px; height: 40px; border-radius: 5px;}
+.doctorAdmin .articleCase {flex: 1; padding-left: 10px;}
+.doctorAdmin .articleCase p {color: #333; font-size: 12px;}
+.doctorAdmin .articleCase .blod {font-size: 14px;}
+.infoNub {background: #FF0000; color: #fff; font-size: 12px; line-height: 12px; display: inline-block; padding: 3px; border-radius: 9px; position: absolute; top: 4px; left: 45px;}
+.fixedR {font-size: 14px; color: #333; background: #fff; position: fixed; width: 35px;padding: 10px; top: 100px; right: 0px;}
+.controlStar {float: right; padding-right: 38px;}
+/*排名列表*/
+.rankingList {display: flex;}
+.rankingList > div {flex: 1; text-align: center;}
+.rankingList .font-left {text-align: left;}
+.rankingList .font-right {text-align: right;}

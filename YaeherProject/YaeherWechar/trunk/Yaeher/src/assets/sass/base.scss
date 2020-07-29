@@ -1,0 +1,337 @@
+$default-color: #7BC2FA;
+$default-bgcolor: #f1f1f1;
+$color-afont: #333;
+$color-bfont: #666;
+$color-cfont: #999;
+$color-wfont: #fff;
+$color-star: #ff8518;
+$color-red: #ff0000;
+$color-green: #2AC845;
+$color-or: #EC971F;
+
+$font-s: 12px;
+$font-m: 14px;
+$font-l: 16px;
+$font-t: 17px;
+$font-xl: 18px; 
+$font-xxl: 20px;
+
+$bor-color: #d9d9d9;
+body, html {
+  line-height: 1;
+  font-weight: normal;
+  font-family: 'PingFang SC', 'Droidsansfallback', 'Helvetica-Light', 'STHeitiSC-Light', arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: $default-bgcolor;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul,dl {
+  list-style: none;
+  padding: 0px;
+  margin: 0; }
+ p,dd,dt,h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;}
+p {line-height: 1.4; word-wrap: break-word;}
+ a{
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  color: $color-afont; }
+.clearfix {
+  display: inline-block;}
+.clearfix:after {
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden; }
+
+
+@mixin border-min {
+  background-image: -webkit-linear-gradient(top, $bor-color, $bor-color 50%, transparent 50%);
+  background-image: linear-gradient(180deg, $bor-color, $bor-color 50%, transparent 50%);
+  background-size: 120% 1px;
+  background-repeat: no-repeat;      
+  background-origin: content-box;
+}
+.border-top {
+  @include border-min;
+  background-position: top left;
+} 
+.border-bottom {
+  @include border-min;
+  background-position: bottom left;
+}        
+.pswp--supports-fs .pswp__button--fs {
+  display: none !important;
+}
+.pswp--zoom-allowed .pswp__button--zoom {
+  display: none !important;
+}
+.p-content{ padding-bottom: 55px;overflow: auto; background: $default-bgcolor;
+    -webkit-overflow-scrolling: touch;}
+.content{overflow: auto; background: $default-bgcolor;
+    -webkit-overflow-scrolling: touch;}
+.mint-search {height: 100%;}
+.mint-search-list {display: none;}
+.border-nome {border: none !important;}
+.mint-button--primary {background-color: $default-color;}
+.mt-progress {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+}
+.mt-progress div {
+  font-size: 12px;
+}
+.flex {display: flex;}
+.star5 {background: url(../../assets/image/star1.png) -13px -133px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star4 {background: url(../../assets/image/star1.png) -13px -113px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star3 {background: url(../../assets/image/star1.png) -13px -93px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star2 {background: url(../../assets/image/star1.png) -13px -73px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star1 {background: url(../../assets/image/star1.png) -13px -53px no-repeat; display: inline-block; width: 79px; height: 14px;}
+.star0 {background: url(../../assets/image/star1.png) -13px -153px no-repeat; display: inline-block; width: 79px; height: 14px;}
+
+.give-star {display: inline-block; vertical-align: middle; padding: 0 0 0 0px;}
+.give-star > div {margin-right: 3px;}
+.starNo{background: url(../../assets/image/star-no.png) no-repeat; display: inline-block; width: 14px; height: 14px; background-size: 100% 100%;}
+.starOk{background: url(../../assets/image/star-ok.png) no-repeat; display: inline-block; width: 14px; height: 14px; background-size: 100% 100%;}
+.starBan{
+  background: url(../../assets/image/star-ban.png) no-repeat; 
+  display: inline-block; 
+  width: 14px; 
+  height: 14px; 
+  background-size: 100% 100%;
+}
+.mint-toast {
+  z-index: 10000;
+}
+.mint-indicator-wrapper {
+  z-index: 9999;
+}
+.vc-toggle{
+  -webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+.navBar {display: flex; z-index: 999; height: 45px; border-top: 1px solid #ddd; padding: 0; color: #333; font-size: $font-l; text-align: center; line-height: 45px; position: fixed; bottom: 0; left: 0; right: 0; background: #fff;}
+.navBar li {flex: 1; list-style: none; border-right: 1px solid #ddd; padding: 0;}
+.navBar li a {display: inline-block; width: 100%; height: 100%;}
+ul { padding: 0 15px; background: $color-wfont;}
+ul li { border-bottom: 1px solid #eee; padding: 15px 0;}
+
+ul li:nth-last-child(1){border-bottom:none;}
+.user-list {padding: 0 0 0 15px; margin-top: 10px;}
+.user-list li {padding: 0px 0;}
+.user-list li a {padding: 13px 0; display: block;}
+.user-title { padding-left: 30px; font-size: $font-xl;}
+.user-title1 { padding-left: 0px;}
+.flex > div {flex: 1;}
+.href-arrow {position: relative;}
+.href-arrow .mint-cell-allow-right::after {right: 15px;}
+.red-hint {color: $color-red;}
+.green-hint {color: $color-green;}
+.font-o{color: $color-or;}
+.text-right {text-align: right;}
+.mint-header {height: 42px; background-color: $default-color}
+.mint-header.is-fixed { z-index: 20;}
+.padding-top {padding-top: 42px;}
+.margin-top {margin: 10px 0;}
+.mint-header-title {height: 16px; line-height: 16px;}
+.mint-msgbox-input input {box-sizing: border-box;}
+#app .picker {
+  background: $color-wfont;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+
+.lengthSpan {display: inline-block; width: 3px; height: 20px;}
+.right-white {color: $color-wfont;}
+.mint-searchbar {background-color: $default-color;}
+.mint-header .mint-button { padding-right: 10px;}
+.record-icon {text-align: right;}
+.record-icon img {width: 25px; height: 25px; display: inline-block;}
+.mint-searchbar-cancel {color: $color-wfont;}
+.slots-no {position: absolute; top: 15px; left: 15px;}
+.slots-ok {position: absolute; top: 15px; right: 15px; color: $default-color;}
+
+li img {
+  max-height: 100%;
+}
+
+// 图片预览
+.viewer-toolbar > ul > li {
+  padding: 0;
+}
+.viewer-list > li {
+  padding: 0;
+}
+.viewer-footer {
+  bottom: 3px;
+}
+.viewer-toolbar > ul {
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.viewer-toolbar > ul > li + li {
+  margin-left: 3px;
+}
+
+.viewer-backdrop {
+  background-color: rgba(0, 0, 0, 1);
+}
+.viewer-button {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.viewer-one-to-one, .viewer-reset, .viewer-play, .viewer-flip-horizontal .viewer-flip-vertical, .viewer-flip-horizontal, .viewer-flip-vertical {
+  display: none;
+}
+
+.illness-case {display: flex; padding: 10px 0;
+  .plValue {
+      color: $color-bfont;
+  }
+}
+// doctorList
+
+// articleList
+.articleList {
+  overflow: hidden; 
+  display: flex; 
+  position: relative;
+  img {
+    float: left; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 8px;
+  }
+  .articleCase {
+    padding: 0 10px;
+  }
+}
+input, textarea{
+  outline:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+textarea {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  resize: none;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.content .illness-case .plValue {
+  color: #999;
+}
+
+.line-textov {
+  -webkit-box-orient: vertical;
+}
+
+// 兼容
+// .v-modal {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// }
+
+.picker-toolbar {
+  overflow: hidden;
+}
+
+// 搜索
+
+.searchCase {
+  padding: 0 10px 10px;
+  background-color: $default-color; 
+  .searchBox {
+      background: #fff url(../../assets/image/search-pic.png) 8px 14px no-repeat; 
+      padding: 6px 15px 4px 23px;
+      background-size: 14px 14px;
+      display: flex;
+      line-height: 19px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      input {
+          border: none;
+          outline: none;
+          flex: 1;
+          padding: 0;
+          display: block;
+          line-height: normal;
+          font-size: $font-l;
+      }
+      div {
+          width: 50px;
+          text-align: center;
+          font-size: $font-l;
+          color: $color-bfont;
+          height: 30px;
+          line-height: 30px;
+      }
+  }
+}
+
+// .searchCase {
+//   padding: 0 10px 10px;
+//   background-color: $default-color; 
+//   .searchBox {
+//       background: #fff url(../../assets/image/search-pic.png) 8px 8.2px no-repeat; 
+//       padding: 8px 15px 6px 28px;
+//       background-size: 14px 14px;
+//       display: flex;
+//       line-height: 19px;
+//       border-radius: 20px;
+//       margin-right: 45px;
+//       position: relative;
+  
+//       input {
+//           border: none;
+//           outline: none;
+//           flex: 1;
+//           padding: 0;
+//           display: block;
+//           line-height: normal;
+//           font-size: $font-m;
+//           font-family: PingFang-SC-Regular;
+//       }
+
+//       input::-webkit-input-placeholder {
+//           font-size: $font-m; 
+//       }
+
+//       div {
+//           width: 50px;
+//           text-align: center;
+//           font-size: $font-l;
+//           color: $color-bfont;
+//           height: 31px;
+//           line-height: 32px;
+//           position: absolute;
+//           right: -50px;
+//           top: 0;
+//       }
+//   }
+// }
