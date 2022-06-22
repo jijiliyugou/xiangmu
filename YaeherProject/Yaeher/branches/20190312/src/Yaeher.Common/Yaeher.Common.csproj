@@ -15,7 +15,7 @@
     <PackageReference Include="Aliyun.Net.SDK.Core" Version="1.0.3" />
     <PackageReference Include="Aliyun.Net.SDK.Dysmsapi" Version="1.0.3" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.6.20" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Senparc.Weixin" Version="6.2.0" />
     <PackageReference Include="Senparc.Weixin.MP" Version="16.5.0" />
     <PackageReference Include="Senparc.Weixin.TenPay" Version="1.0.2" />
